@@ -1,0 +1,1402 @@
+{
+  "build": "py313h80987f9_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/osx-arm64",
+  "constrains": [],
+  "depends": [
+    "python >=3.13,<3.14.0a0",
+    "python_abi 3.13.* *_cp313"
+  ],
+  "extracted_package_dir": "/opt/anaconda3/pkgs/tornado-6.4.1-py313h80987f9_0",
+  "files": [
+    "lib/python3.13/site-packages/tornado-6.4.1.dist-info/INSTALLER",
+    "lib/python3.13/site-packages/tornado-6.4.1.dist-info/LICENSE",
+    "lib/python3.13/site-packages/tornado-6.4.1.dist-info/METADATA",
+    "lib/python3.13/site-packages/tornado-6.4.1.dist-info/RECORD",
+    "lib/python3.13/site-packages/tornado-6.4.1.dist-info/REQUESTED",
+    "lib/python3.13/site-packages/tornado-6.4.1.dist-info/WHEEL",
+    "lib/python3.13/site-packages/tornado-6.4.1.dist-info/direct_url.json",
+    "lib/python3.13/site-packages/tornado-6.4.1.dist-info/top_level.txt",
+    "lib/python3.13/site-packages/tornado/__init__.py",
+    "lib/python3.13/site-packages/tornado/__pycache__/__init__.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/__pycache__/_locale_data.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/__pycache__/auth.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/__pycache__/autoreload.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/__pycache__/concurrent.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/__pycache__/curl_httpclient.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/__pycache__/escape.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/__pycache__/gen.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/__pycache__/http1connection.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/__pycache__/httpclient.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/__pycache__/httpserver.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/__pycache__/httputil.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/__pycache__/ioloop.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/__pycache__/iostream.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/__pycache__/locale.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/__pycache__/locks.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/__pycache__/log.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/__pycache__/netutil.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/__pycache__/options.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/__pycache__/process.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/__pycache__/queues.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/__pycache__/routing.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/__pycache__/simple_httpclient.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/__pycache__/tcpclient.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/__pycache__/tcpserver.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/__pycache__/template.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/__pycache__/testing.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/__pycache__/util.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/__pycache__/web.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/__pycache__/websocket.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/__pycache__/wsgi.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/_locale_data.py",
+    "lib/python3.13/site-packages/tornado/auth.py",
+    "lib/python3.13/site-packages/tornado/autoreload.py",
+    "lib/python3.13/site-packages/tornado/concurrent.py",
+    "lib/python3.13/site-packages/tornado/curl_httpclient.py",
+    "lib/python3.13/site-packages/tornado/escape.py",
+    "lib/python3.13/site-packages/tornado/gen.py",
+    "lib/python3.13/site-packages/tornado/http1connection.py",
+    "lib/python3.13/site-packages/tornado/httpclient.py",
+    "lib/python3.13/site-packages/tornado/httpserver.py",
+    "lib/python3.13/site-packages/tornado/httputil.py",
+    "lib/python3.13/site-packages/tornado/ioloop.py",
+    "lib/python3.13/site-packages/tornado/iostream.py",
+    "lib/python3.13/site-packages/tornado/locale.py",
+    "lib/python3.13/site-packages/tornado/locks.py",
+    "lib/python3.13/site-packages/tornado/log.py",
+    "lib/python3.13/site-packages/tornado/netutil.py",
+    "lib/python3.13/site-packages/tornado/options.py",
+    "lib/python3.13/site-packages/tornado/platform/__init__.py",
+    "lib/python3.13/site-packages/tornado/platform/__pycache__/__init__.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/platform/__pycache__/asyncio.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/platform/__pycache__/caresresolver.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/platform/__pycache__/twisted.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/platform/asyncio.py",
+    "lib/python3.13/site-packages/tornado/platform/caresresolver.py",
+    "lib/python3.13/site-packages/tornado/platform/twisted.py",
+    "lib/python3.13/site-packages/tornado/process.py",
+    "lib/python3.13/site-packages/tornado/py.typed",
+    "lib/python3.13/site-packages/tornado/queues.py",
+    "lib/python3.13/site-packages/tornado/routing.py",
+    "lib/python3.13/site-packages/tornado/simple_httpclient.py",
+    "lib/python3.13/site-packages/tornado/speedups.abi3.so",
+    "lib/python3.13/site-packages/tornado/tcpclient.py",
+    "lib/python3.13/site-packages/tornado/tcpserver.py",
+    "lib/python3.13/site-packages/tornado/template.py",
+    "lib/python3.13/site-packages/tornado/test/__init__.py",
+    "lib/python3.13/site-packages/tornado/test/__main__.py",
+    "lib/python3.13/site-packages/tornado/test/__pycache__/__init__.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/test/__pycache__/__main__.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/test/__pycache__/asyncio_test.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/test/__pycache__/auth_test.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/test/__pycache__/autoreload_test.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/test/__pycache__/circlerefs_test.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/test/__pycache__/concurrent_test.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/test/__pycache__/curl_httpclient_test.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/test/__pycache__/escape_test.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/test/__pycache__/gen_test.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/test/__pycache__/http1connection_test.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/test/__pycache__/httpclient_test.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/test/__pycache__/httpserver_test.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/test/__pycache__/httputil_test.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/test/__pycache__/import_test.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/test/__pycache__/ioloop_test.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/test/__pycache__/iostream_test.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/test/__pycache__/locale_test.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/test/__pycache__/locks_test.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/test/__pycache__/log_test.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/test/__pycache__/netutil_test.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/test/__pycache__/options_test.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/test/__pycache__/process_test.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/test/__pycache__/queues_test.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/test/__pycache__/resolve_test_helper.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/test/__pycache__/routing_test.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/test/__pycache__/runtests.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/test/__pycache__/simple_httpclient_test.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/test/__pycache__/tcpclient_test.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/test/__pycache__/tcpserver_test.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/test/__pycache__/template_test.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/test/__pycache__/testing_test.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/test/__pycache__/twisted_test.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/test/__pycache__/util.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/test/__pycache__/util_test.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/test/__pycache__/web_test.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/test/__pycache__/websocket_test.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/test/__pycache__/wsgi_test.cpython-313.pyc",
+    "lib/python3.13/site-packages/tornado/test/asyncio_test.py",
+    "lib/python3.13/site-packages/tornado/test/auth_test.py",
+    "lib/python3.13/site-packages/tornado/test/autoreload_test.py",
+    "lib/python3.13/site-packages/tornado/test/circlerefs_test.py",
+    "lib/python3.13/site-packages/tornado/test/concurrent_test.py",
+    "lib/python3.13/site-packages/tornado/test/csv_translations/fr_FR.csv",
+    "lib/python3.13/site-packages/tornado/test/curl_httpclient_test.py",
+    "lib/python3.13/site-packages/tornado/test/escape_test.py",
+    "lib/python3.13/site-packages/tornado/test/gen_test.py",
+    "lib/python3.13/site-packages/tornado/test/gettext_translations/fr_FR/LC_MESSAGES/tornado_test.mo",
+    "lib/python3.13/site-packages/tornado/test/gettext_translations/fr_FR/LC_MESSAGES/tornado_test.po",
+    "lib/python3.13/site-packages/tornado/test/http1connection_test.py",
+    "lib/python3.13/site-packages/tornado/test/httpclient_test.py",
+    "lib/python3.13/site-packages/tornado/test/httpserver_test.py",
+    "lib/python3.13/site-packages/tornado/test/httputil_test.py",
+    "lib/python3.13/site-packages/tornado/test/import_test.py",
+    "lib/python3.13/site-packages/tornado/test/ioloop_test.py",
+    "lib/python3.13/site-packages/tornado/test/iostream_test.py",
+    "lib/python3.13/site-packages/tornado/test/locale_test.py",
+    "lib/python3.13/site-packages/tornado/test/locks_test.py",
+    "lib/python3.13/site-packages/tornado/test/log_test.py",
+    "lib/python3.13/site-packages/tornado/test/netutil_test.py",
+    "lib/python3.13/site-packages/tornado/test/options_test.cfg",
+    "lib/python3.13/site-packages/tornado/test/options_test.py",
+    "lib/python3.13/site-packages/tornado/test/options_test_types.cfg",
+    "lib/python3.13/site-packages/tornado/test/options_test_types_str.cfg",
+    "lib/python3.13/site-packages/tornado/test/process_test.py",
+    "lib/python3.13/site-packages/tornado/test/queues_test.py",
+    "lib/python3.13/site-packages/tornado/test/resolve_test_helper.py",
+    "lib/python3.13/site-packages/tornado/test/routing_test.py",
+    "lib/python3.13/site-packages/tornado/test/runtests.py",
+    "lib/python3.13/site-packages/tornado/test/simple_httpclient_test.py",
+    "lib/python3.13/site-packages/tornado/test/static/dir/index.html",
+    "lib/python3.13/site-packages/tornado/test/static/robots.txt",
+    "lib/python3.13/site-packages/tornado/test/static/sample.xml",
+    "lib/python3.13/site-packages/tornado/test/static/sample.xml.bz2",
+    "lib/python3.13/site-packages/tornado/test/static/sample.xml.gz",
+    "lib/python3.13/site-packages/tornado/test/static_foo.txt",
+    "lib/python3.13/site-packages/tornado/test/tcpclient_test.py",
+    "lib/python3.13/site-packages/tornado/test/tcpserver_test.py",
+    "lib/python3.13/site-packages/tornado/test/template_test.py",
+    "lib/python3.13/site-packages/tornado/test/templates/utf8.html",
+    "lib/python3.13/site-packages/tornado/test/test.crt",
+    "lib/python3.13/site-packages/tornado/test/test.key",
+    "lib/python3.13/site-packages/tornado/test/testing_test.py",
+    "lib/python3.13/site-packages/tornado/test/twisted_test.py",
+    "lib/python3.13/site-packages/tornado/test/util.py",
+    "lib/python3.13/site-packages/tornado/test/util_test.py",
+    "lib/python3.13/site-packages/tornado/test/web_test.py",
+    "lib/python3.13/site-packages/tornado/test/websocket_test.py",
+    "lib/python3.13/site-packages/tornado/test/wsgi_test.py",
+    "lib/python3.13/site-packages/tornado/testing.py",
+    "lib/python3.13/site-packages/tornado/util.py",
+    "lib/python3.13/site-packages/tornado/web.py",
+    "lib/python3.13/site-packages/tornado/websocket.py",
+    "lib/python3.13/site-packages/tornado/wsgi.py"
+  ],
+  "fn": "tornado-6.4.1-py313h80987f9_0.conda",
+  "license": "Apache-2.0",
+  "link": {
+    "source": "/opt/anaconda3/pkgs/tornado-6.4.1-py313h80987f9_0",
+    "type": 1
+  },
+  "md5": "5cecf514d2efc9181a065197941fcc0c",
+  "name": "tornado",
+  "package_tarball_full_path": "/opt/anaconda3/pkgs/tornado-6.4.1-py313h80987f9_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.13/site-packages/tornado-6.4.1.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado-6.4.1.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "sha256_in_prefix": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "size_in_bytes": 11358
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado-6.4.1.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "f26cce4b1246cb754b38d01a681a64b0a43532043ec07518bfeb6f7767c28dbe",
+        "sha256_in_prefix": "f26cce4b1246cb754b38d01a681a64b0a43532043ec07518bfeb6f7767c28dbe",
+        "size_in_bytes": 2484
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado-6.4.1.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "f6c50d0288136f7c23b9bba0cb4d6d8c0a48a71de01c0ce830a090ebe72fe047",
+        "sha256_in_prefix": "f6c50d0288136f7c23b9bba0cb4d6d8c0a48a71de01c0ce830a090ebe72fe047",
+        "size_in_bytes": 12144
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado-6.4.1.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado-6.4.1.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "ba4a5d460638c4a68ae2dd1d3d3fe1d6eff67ab55417a96a08e18eb583267251",
+        "sha256_in_prefix": "ba4a5d460638c4a68ae2dd1d3d3fe1d6eff67ab55417a96a08e18eb583267251",
+        "size_in_bytes": 108
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado-6.4.1.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "aa54c301cc4dc61f8a8425856881253fcae409a596b4093fdcf1cb33b15e9f1b",
+        "sha256_in_prefix": "aa54c301cc4dc61f8a8425856881253fcae409a596b4093fdcf1cb33b15e9f1b",
+        "size_in_bytes": 117
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado-6.4.1.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "e5000ad4c78da5681876a5a853c898943b8607c8fa3433e0c7eb925074ded00e",
+        "sha256_in_prefix": "e5000ad4c78da5681876a5a853c898943b8607c8fa3433e0c7eb925074ded00e",
+        "size_in_bytes": 8
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "3eeac1e8b82536df9ae532ac4b1f5c8c510da9ae28faeef4653c1c6df7e5d5e1",
+        "sha256_in_prefix": "3eeac1e8b82536df9ae532ac4b1f5c8c510da9ae28faeef4653c1c6df7e5d5e1",
+        "size_in_bytes": 1761
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/__pycache__/__init__.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "cc3afceb3f826aca7aa4625574bde4c61ede290acde0216484decf48ca754764",
+        "sha256_in_prefix": "cc3afceb3f826aca7aa4625574bde4c61ede290acde0216484decf48ca754764",
+        "size_in_bytes": 1056
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/__pycache__/_locale_data.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "982080f9f2747aca0eba697f58432235186b9d4dc7e1d80564381a86cbc22a1c",
+        "sha256_in_prefix": "982080f9f2747aca0eba697f58432235186b9d4dc7e1d80564381a86cbc22a1c",
+        "size_in_bytes": 3999
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/__pycache__/auth.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "e4f65f04a58facdc4214a83a462e4fda535e5c089ae13bc29c4cbffaaac2d4b3",
+        "sha256_in_prefix": "e4f65f04a58facdc4214a83a462e4fda535e5c089ae13bc29c4cbffaaac2d4b3",
+        "size_in_bytes": 54530
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/__pycache__/autoreload.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "8ef3ac03a2d70130883ca4d0479a9627ea48d6449e0b7ade48f346c45fcaa107",
+        "sha256_in_prefix": "8ef3ac03a2d70130883ca4d0479a9627ea48d6449e0b7ade48f346c45fcaa107",
+        "size_in_bytes": 11750
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/__pycache__/concurrent.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "58ba368b9efb13ce0f3c4fbebc1ee28d06d8e433c8e439944754c64fe10b6817",
+        "sha256_in_prefix": "58ba368b9efb13ce0f3c4fbebc1ee28d06d8e433c8e439944754c64fe10b6817",
+        "size_in_bytes": 10238
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/__pycache__/curl_httpclient.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "f25ace97959a76529b484c32bcb945e045efedf88c44f0f67504363f18b9eac4",
+        "sha256_in_prefix": "f25ace97959a76529b484c32bcb945e045efedf88c44f0f67504363f18b9eac4",
+        "size_in_bytes": 28609
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/__pycache__/escape.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "2fdd3a7ba54307a0a80b11449eb05b7cf747dcef3b6ade74f002590526cb32f5",
+        "sha256_in_prefix": "2fdd3a7ba54307a0a80b11449eb05b7cf747dcef3b6ade74f002590526cb32f5",
+        "size_in_bytes": 15464
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/__pycache__/gen.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "062fe7daac7cde444e71cc065473ff7f563783f5765bd86ed05a733b8e3ef8a0",
+        "sha256_in_prefix": "062fe7daac7cde444e71cc065473ff7f563783f5765bd86ed05a733b8e3ef8a0",
+        "size_in_bytes": 34854
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/__pycache__/http1connection.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "7312c983a5c1bfb16b11707fb14ec07a05627aa345ba7da35554d2d004dd67a2",
+        "sha256_in_prefix": "7312c983a5c1bfb16b11707fb14ec07a05627aa345ba7da35554d2d004dd67a2",
+        "size_in_bytes": 41979
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/__pycache__/httpclient.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "24e1f1eee6e75813e26e13dbd35f6c55d2061c3f876d79c6d9ce8673ace21b3e",
+        "sha256_in_prefix": "24e1f1eee6e75813e26e13dbd35f6c55d2061c3f876d79c6d9ce8673ace21b3e",
+        "size_in_bytes": 34123
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/__pycache__/httpserver.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "7aaa6164ff516cee91356d4fe226d872905cf314ced361e2f3c1e5a9e41cce9c",
+        "sha256_in_prefix": "7aaa6164ff516cee91356d4fe226d872905cf314ced361e2f3c1e5a9e41cce9c",
+        "size_in_bytes": 18804
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/__pycache__/httputil.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "ff99eedd0f1fb94fdd04ef08193ff03ec7097939bed849fe0246967e7798a265",
+        "sha256_in_prefix": "ff99eedd0f1fb94fdd04ef08193ff03ec7097939bed849fe0246967e7798a265",
+        "size_in_bytes": 44434
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/__pycache__/ioloop.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "c20bf238ab18fb1f711d4e4f4b2c87413bbd2ebe40a0b0f51769511c5621479e",
+        "sha256_in_prefix": "c20bf238ab18fb1f711d4e4f4b2c87413bbd2ebe40a0b0f51769511c5621479e",
+        "size_in_bytes": 38219
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/__pycache__/iostream.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "507f2a212e46afee93c537729f4533aab0651d7bd5409ca42e073bc2f30f5120",
+        "sha256_in_prefix": "507f2a212e46afee93c537729f4533aab0651d7bd5409ca42e073bc2f30f5120",
+        "size_in_bytes": 65685
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/__pycache__/locale.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "8c99938503149861e1878efe2c7e39519568e05445f25e9beae045c740599b3b",
+        "sha256_in_prefix": "8c99938503149861e1878efe2c7e39519568e05445f25e9beae045c740599b3b",
+        "size_in_bytes": 24102
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/__pycache__/locks.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "783b6d09bd2272963b5df44104ef6a1b55ba67e6cf16f3c76dc752e44f0c01ec",
+        "sha256_in_prefix": "783b6d09bd2272963b5df44104ef6a1b55ba67e6cf16f3c76dc752e44f0c01ec",
+        "size_in_bytes": 22957
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/__pycache__/log.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "30d05f595f4f23e7c87f7b9f252212bab7acb84383c7ab86ac02f7d49c287b72",
+        "sha256_in_prefix": "30d05f595f4f23e7c87f7b9f252212bab7acb84383c7ab86ac02f7d49c287b72",
+        "size_in_bytes": 12612
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/__pycache__/netutil.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "02c8ee79249235555ea4ee12ba94ba0df6fe50b4e814ab4ae39085be055af51b",
+        "sha256_in_prefix": "02c8ee79249235555ea4ee12ba94ba0df6fe50b4e814ab4ae39085be055af51b",
+        "size_in_bytes": 26367
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/__pycache__/options.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "9ab064a3da5642d51b3c4ae5c6cf8ad7ed3f179c7c19bd326ad7d8102aca961c",
+        "sha256_in_prefix": "9ab064a3da5642d51b3c4ae5c6cf8ad7ed3f179c7c19bd326ad7d8102aca961c",
+        "size_in_bytes": 32545
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/__pycache__/process.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "ed7502415df4fdd6933df6f9d63d5e895c1e55acb8bcbadd604bf1123a97f4f2",
+        "sha256_in_prefix": "ed7502415df4fdd6933df6f9d63d5e895c1e55acb8bcbadd604bf1123a97f4f2",
+        "size_in_bytes": 14609
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/__pycache__/queues.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "2bb612d39c593fed28107892ff32f8f75c9d99e41b55f6aaf6837418f0d14eff",
+        "sha256_in_prefix": "2bb612d39c593fed28107892ff32f8f75c9d99e41b55f6aaf6837418f0d14eff",
+        "size_in_bytes": 17954
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/__pycache__/routing.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "d47088b44fb4a42030e09c2c4769602e6770d86cd833d80c2d13c5a380dc29c7",
+        "sha256_in_prefix": "d47088b44fb4a42030e09c2c4769602e6770d86cd833d80c2d13c5a380dc29c7",
+        "size_in_bytes": 31913
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/__pycache__/simple_httpclient.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "b970b5476c4db18a3383af6fed68df38c8a92cee06758f0ca4b3ae0fb3c451d7",
+        "sha256_in_prefix": "b970b5476c4db18a3383af6fed68df38c8a92cee06758f0ca4b3ae0fb3c451d7",
+        "size_in_bytes": 35244
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/__pycache__/tcpclient.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "67d4499fa9a619c6cdc3cbba1d7405cae20a2cb00eebb401e7763b27054d7865",
+        "sha256_in_prefix": "67d4499fa9a619c6cdc3cbba1d7405cae20a2cb00eebb401e7763b27054d7865",
+        "size_in_bytes": 14463
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/__pycache__/tcpserver.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "f447ed16bf5df654d07172fa97ce71bf33840aecf89633aa258bcc5b8f0c7a29",
+        "sha256_in_prefix": "f447ed16bf5df654d07172fa97ce71bf33840aecf89633aa258bcc5b8f0c7a29",
+        "size_in_bytes": 14732
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/__pycache__/template.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "f728167a51b379aed8eaa741e81b2b64f25b6c27ee6a62fbb875427f275fd3e5",
+        "sha256_in_prefix": "f728167a51b379aed8eaa741e81b2b64f25b6c27ee6a62fbb875427f275fd3e5",
+        "size_in_bytes": 50448
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/__pycache__/testing.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "a9be47a7f939682055498192b62901678ab8e3d0615fc39a022ad21761233b9d",
+        "sha256_in_prefix": "a9be47a7f939682055498192b62901678ab8e3d0615fc39a022ad21761233b9d",
+        "size_in_bytes": 36253
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/__pycache__/util.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "758e8d5db3ae240236b255f07b58ea39203acb9fea397a32309767d9aac01096",
+        "sha256_in_prefix": "758e8d5db3ae240236b255f07b58ea39203acb9fea397a32309767d9aac01096",
+        "size_in_bytes": 18546
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/__pycache__/web.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "42ecf788632f86fa6c63cfb6ad29b9a5b9fc8024f3de67d1afa4525b75bb7c23",
+        "sha256_in_prefix": "42ecf788632f86fa6c63cfb6ad29b9a5b9fc8024f3de67d1afa4525b75bb7c23",
+        "size_in_bytes": 162992
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/__pycache__/websocket.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "93883b676e13914690804d9feef960bf0c7cc52abc7743ce8cf0ae2f48757465",
+        "sha256_in_prefix": "93883b676e13914690804d9feef960bf0c7cc52abc7743ce8cf0ae2f48757465",
+        "size_in_bytes": 74568
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/__pycache__/wsgi.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "87efafb225e4725e0496e8c25ea9d62ec8de3dabf8bf2567ce2f3c49a3759915",
+        "sha256_in_prefix": "87efafb225e4725e0496e8c25ea9d62ec8de3dabf8bf2567ce2f3c49a3759915",
+        "size_in_bytes": 12735
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/_locale_data.py",
+        "path_type": "hardlink",
+        "sha256": "00ef19b59ef955e66c891a62adb1fe14dbf3dce1434311907179aa4f6f6f696a",
+        "sha256_in_prefix": "00ef19b59ef955e66c891a62adb1fe14dbf3dce1434311907179aa4f6f6f696a",
+        "size_in_bytes": 4503
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/auth.py",
+        "path_type": "hardlink",
+        "sha256": "7d6744d771f1fc504c052ab7db81ca2574d76fdef515dc00324149e969055622",
+        "sha256_in_prefix": "7d6744d771f1fc504c052ab7db81ca2574d76fdef515dc00324149e969055622",
+        "size_in_bytes": 49347
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/autoreload.py",
+        "path_type": "hardlink",
+        "sha256": "518dbd41fd20065fe3c2b4b74261a1ccb62f9fe983f4a389e1aed7c4cf4f2b7d",
+        "sha256_in_prefix": "518dbd41fd20065fe3c2b4b74261a1ccb62f9fe983f4a389e1aed7c4cf4f2b7d",
+        "size_in_bytes": 13136
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/concurrent.py",
+        "path_type": "hardlink",
+        "sha256": "326384f36030f1ce0307e98f29cfee390674b9aaeebade5cdb4dba896cabef37",
+        "sha256_in_prefix": "326384f36030f1ce0307e98f29cfee390674b9aaeebade5cdb4dba896cabef37",
+        "size_in_bytes": 8307
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/curl_httpclient.py",
+        "path_type": "hardlink",
+        "sha256": "806abf693851fd561650c4b4759ac511da31c0ed0fc606979a862677b7862b90",
+        "sha256_in_prefix": "806abf693851fd561650c4b4759ac511da31c0ed0fc606979a862677b7862b90",
+        "size_in_bytes": 24862
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/escape.py",
+        "path_type": "hardlink",
+        "sha256": "5316d5af9b6bef30a781d47ccf239f992330720303c321d908ca71a4b685eeb1",
+        "sha256_in_prefix": "5316d5af9b6bef30a781d47ccf239f992330720303c321d908ca71a4b685eeb1",
+        "size_in_bytes": 14257
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/gen.py",
+        "path_type": "hardlink",
+        "sha256": "1cf2ee22efa8fbe50f1f5164fa56ee010e0ad2c939aeb0767ad62113c1290227",
+        "sha256_in_prefix": "1cf2ee22efa8fbe50f1f5164fa56ee010e0ad2c939aeb0767ad62113c1290227",
+        "size_in_bytes": 31678
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/http1connection.py",
+        "path_type": "hardlink",
+        "sha256": "983a85ff2417a5699abeda6fb425e3755381154b0538f9b751c3f08ac87a9c22",
+        "sha256_in_prefix": "983a85ff2417a5699abeda6fb425e3755381154b0538f9b751c3f08ac87a9c22",
+        "size_in_bytes": 37688
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/httpclient.py",
+        "path_type": "hardlink",
+        "sha256": "7c328b33454b48ecf8c1ec813a11bcc3e58f7eeff28db4f99b0d10d18c51e51b",
+        "sha256_in_prefix": "7c328b33454b48ecf8c1ec813a11bcc3e58f7eeff28db4f99b0d10d18c51e51b",
+        "size_in_bytes": 31919
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/httpserver.py",
+        "path_type": "hardlink",
+        "sha256": "45c945a4fe1007defe28b86bbc7aba8bea7edcf073dadb798debe5de1bfa0c8c",
+        "sha256_in_prefix": "45c945a4fe1007defe28b86bbc7aba8bea7edcf073dadb798debe5de1bfa0c8c",
+        "size_in_bytes": 16137
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/httputil.py",
+        "path_type": "hardlink",
+        "sha256": "0f5562826cee871764ab505e0751aeae57809e7dd2361334ee99702d2b0cc3d8",
+        "sha256_in_prefix": "0f5562826cee871764ab505e0751aeae57809e7dd2361334ee99702d2b0cc3d8",
+        "size_in_bytes": 36229
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/ioloop.py",
+        "path_type": "hardlink",
+        "sha256": "ab6961e6e792143eb25bb938588bc6f500caaaa61ea77968e8f94abbb3d04c1d",
+        "sha256_in_prefix": "ab6961e6e792143eb25bb938588bc6f500caaaa61ea77968e8f94abbb3d04c1d",
+        "size_in_bytes": 36818
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/iostream.py",
+        "path_type": "hardlink",
+        "sha256": "a8c0b2f604dd150706d21d1d7b3418b1aee8ac73235e275c3830ccf8a219cde3",
+        "sha256_in_prefix": "a8c0b2f604dd150706d21d1d7b3418b1aee8ac73235e275c3830ccf8a219cde3",
+        "size_in_bytes": 64412
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/locale.py",
+        "path_type": "hardlink",
+        "sha256": "2558ba92e03e21ad3d11e817c1fb458adbea28c2500745cbfb86e2892ae3d777",
+        "sha256_in_prefix": "2558ba92e03e21ad3d11e817c1fb458adbea28c2500745cbfb86e2892ae3d777",
+        "size_in_bytes": 21154
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/locks.py",
+        "path_type": "hardlink",
+        "sha256": "87717f3f71e90ea9795e168d4dd4abf3f6e25f4b3409e62a466dbb5352575c01",
+        "sha256_in_prefix": "87717f3f71e90ea9795e168d4dd4abf3f6e25f4b3409e62a466dbb5352575c01",
+        "size_in_bytes": 17356
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/log.py",
+        "path_type": "hardlink",
+        "sha256": "ade852c7ea1bb95fb263fbdcdd7892894098484cbe538d3380ec4ca6b9481b87",
+        "sha256_in_prefix": "ade852c7ea1bb95fb263fbdcdd7892894098484cbe538d3380ec4ca6b9481b87",
+        "size_in_bytes": 12549
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/netutil.py",
+        "path_type": "hardlink",
+        "sha256": "46d809370632faa54f532303ca4d6301da33aa46b325d49d8cc664cb181c5a18",
+        "sha256_in_prefix": "46d809370632faa54f532303ca4d6301da33aa46b325d49d8cc664cb181c5a18",
+        "size_in_bytes": 25045
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/options.py",
+        "path_type": "hardlink",
+        "sha256": "e649dec18fde66e943122b01539e57c9df5825d49f5f0be406728474c7033c45",
+        "sha256_in_prefix": "e649dec18fde66e943122b01539e57c9df5825d49f5f0be406728474c7033c45",
+        "size_in_bytes": 26254
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/platform/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/platform/__pycache__/__init__.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "036958fa7afaf8e7a399e75330ff4cc4d2bf8acb9786ee05976d69a878edec56",
+        "sha256_in_prefix": "036958fa7afaf8e7a399e75330ff4cc4d2bf8acb9786ee05976d69a878edec56",
+        "size_in_bytes": 154
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/platform/__pycache__/asyncio.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "5d946bdef1f11435eb9df0e8ebdd617e71c52675628db2121175dca670bd6806",
+        "sha256_in_prefix": "5d946bdef1f11435eb9df0e8ebdd617e71c52675628db2121175dca670bd6806",
+        "size_in_bytes": 31460
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/platform/__pycache__/caresresolver.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "dd267bc4ec3761d30988802be4b8cf0f7c7e6617151c9ae2be08572b62323322",
+        "sha256_in_prefix": "dd267bc4ec3761d30988802be4b8cf0f7c7e6617151c9ae2be08572b62323322",
+        "size_in_bytes": 5112
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/platform/__pycache__/twisted.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "5a8bdef751e62261f94f62a832cf6d0d48d73305bdd6b31f8c40165438fd1cb1",
+        "sha256_in_prefix": "5a8bdef751e62261f94f62a832cf6d0d48d73305bdd6b31f8c40165438fd1cb1",
+        "size_in_bytes": 6861
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/platform/asyncio.py",
+        "path_type": "hardlink",
+        "sha256": "07c2986880e31ead638e1667903992433b28767db750d0f36fa74dc680c7e044",
+        "sha256_in_prefix": "07c2986880e31ead638e1667903992433b28767db750d0f36fa74dc680c7e044",
+        "size_in_bytes": 26733
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/platform/caresresolver.py",
+        "path_type": "hardlink",
+        "sha256": "682e60d6e92ee67fdb0d5d8770090422e32a7838c9a3dd17881c7558e5d347da",
+        "sha256_in_prefix": "682e60d6e92ee67fdb0d5d8770090422e32a7838c9a3dd17881c7558e5d347da",
+        "size_in_bytes": 3500
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/platform/twisted.py",
+        "path_type": "hardlink",
+        "sha256": "58ebf984197a6f8bd4620bb028c8222c981c23ac06e659ba355ebae3d6a3da11",
+        "sha256_in_prefix": "58ebf984197a6f8bd4620bb028c8222c981c23ac06e659ba355ebae3d6a3da11",
+        "size_in_bytes": 5624
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/process.py",
+        "path_type": "hardlink",
+        "sha256": "1c51b88705d5fcb264b4a35c414a3b0d2d47c6294538a3eaa80eb305c9a54830",
+        "sha256_in_prefix": "1c51b88705d5fcb264b4a35c414a3b0d2d47c6294538a3eaa80eb305c9a54830",
+        "size_in_bytes": 12704
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/queues.py",
+        "path_type": "hardlink",
+        "sha256": "997788ffe32956989b693e3aa339991bd2fb08e32a7aa0e16cc674fc313557ef",
+        "sha256_in_prefix": "997788ffe32956989b693e3aa339991bd2fb08e32a7aa0e16cc674fc313557ef",
+        "size_in_bytes": 12530
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/routing.py",
+        "path_type": "hardlink",
+        "sha256": "7c452904f1ca45de0f0a9e0b1f55ca1eca64a841b68e4204ffd86f26bdcc1220",
+        "sha256_in_prefix": "7c452904f1ca45de0f0a9e0b1f55ca1eca64a841b68e4204ffd86f26bdcc1220",
+        "size_in_bytes": 25082
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/simple_httpclient.py",
+        "path_type": "hardlink",
+        "sha256": "dbdfa47ea68d924ef965879cb955f0013f70a792c3e2f27f77e47ae7e3e8ec40",
+        "sha256_in_prefix": "dbdfa47ea68d924ef965879cb955f0013f70a792c3e2f27f77e47ae7e3e8ec40",
+        "size_in_bytes": 27798
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/speedups.abi3.so",
+        "path_type": "hardlink",
+        "sha256": "620119e4a6449ed432753f41294e61a9ab8d6d1590f962ee698affe120a2731f",
+        "sha256_in_prefix": "620119e4a6449ed432753f41294e61a9ab8d6d1590f962ee698affe120a2731f",
+        "size_in_bytes": 67632
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/tcpclient.py",
+        "path_type": "hardlink",
+        "sha256": "d6398d11fbbc4bf455dfc88a99392d0029280b81197e24408e8055cc9e826fcf",
+        "sha256_in_prefix": "d6398d11fbbc4bf455dfc88a99392d0029280b81197e24408e8055cc9e826fcf",
+        "size_in_bytes": 12152
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/tcpserver.py",
+        "path_type": "hardlink",
+        "sha256": "2829e1c67fd8d92f4077e2117a317913d13fb6f05c4c3f0d82ec3b3a181b864d",
+        "sha256_in_prefix": "2829e1c67fd8d92f4077e2117a317913d13fb6f05c4c3f0d82ec3b3a181b864d",
+        "size_in_bytes": 15033
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/template.py",
+        "path_type": "hardlink",
+        "sha256": "a3053624b9f167339cbf7ad2ed0787e531292cb8743c84373fb7de7826a5fe06",
+        "sha256_in_prefix": "a3053624b9f167339cbf7ad2ed0787e531292cb8743c84373fb7de7826a5fe06",
+        "size_in_bytes": 37793
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/__main__.py",
+        "path_type": "hardlink",
+        "sha256": "7f9c61f63816eaea42591895d89d80ef04a0d0d258235c27ef86040ebffc64dc",
+        "sha256_in_prefix": "7f9c61f63816eaea42591895d89d80ef04a0d0d258235c27ef86040ebffc64dc",
+        "size_in_bytes": 336
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/__pycache__/__init__.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "d3a0e325e0ae379e8e2884106fc53b2b7eb9824e1d192a22cd4f78382793dbe3",
+        "sha256_in_prefix": "d3a0e325e0ae379e8e2884106fc53b2b7eb9824e1d192a22cd4f78382793dbe3",
+        "size_in_bytes": 150
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/__pycache__/__main__.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "bb06348dfa6011d3178c9a763ff3161e6976f090d79ae1206578ab5d16e63e44",
+        "sha256_in_prefix": "bb06348dfa6011d3178c9a763ff3161e6976f090d79ae1206578ab5d16e63e44",
+        "size_in_bytes": 340
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/__pycache__/asyncio_test.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "587255752911f70eb05b24ad16ed2f6df6005e6879579884c67fbd78281bda4e",
+        "sha256_in_prefix": "587255752911f70eb05b24ad16ed2f6df6005e6879579884c67fbd78281bda4e",
+        "size_in_bytes": 15978
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/__pycache__/auth_test.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "c98e1d934b039d8ea9e9a56c65b99c445e8d940641146b7491bf9481f4394b5d",
+        "sha256_in_prefix": "c98e1d934b039d8ea9e9a56c65b99c445e8d940641146b7491bf9481f4394b5d",
+        "size_in_bytes": 33177
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/__pycache__/autoreload_test.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "8f0cde54d8b6b9569f538bc55b12923bc1fb0084ab196eb19e0c8bf27f72261b",
+        "sha256_in_prefix": "8f0cde54d8b6b9569f538bc55b12923bc1fb0084ab196eb19e0c8bf27f72261b",
+        "size_in_bytes": 8542
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/__pycache__/circlerefs_test.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "b95335d03fe85764e3e273c38b2cc35a88f0857add07bc62dcaa971bea3c614c",
+        "sha256_in_prefix": "b95335d03fe85764e3e273c38b2cc35a88f0857add07bc62dcaa971bea3c614c",
+        "size_in_bytes": 12271
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/__pycache__/concurrent_test.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "624daa67922f67d6d505c6013704e02c4665cd10e3095645b7cb62931baa755f",
+        "sha256_in_prefix": "624daa67922f67d6d505c6013704e02c4665cd10e3095645b7cb62931baa755f",
+        "size_in_bytes": 12882
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/__pycache__/curl_httpclient_test.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "271a5f83762b9bcaf6e5c69f6650d432e29b13e17ba02304991c3991eea557bf",
+        "sha256_in_prefix": "271a5f83762b9bcaf6e5c69f6650d432e29b13e17ba02304991c3991eea557bf",
+        "size_in_bytes": 7204
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/__pycache__/escape_test.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "f3ef7c1f69eeeb1e04902a21bbb3a34e66edcef83374d6af6f3aa5ae482f45e5",
+        "sha256_in_prefix": "f3ef7c1f69eeeb1e04902a21bbb3a34e66edcef83374d6af6f3aa5ae482f45e5",
+        "size_in_bytes": 12592
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/__pycache__/gen_test.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "91bfdeae062179f023da4e0bd997bbb1fb2f16b5ee94601fcdd9ba391c58c4d2",
+        "sha256_in_prefix": "91bfdeae062179f023da4e0bd997bbb1fb2f16b5ee94601fcdd9ba391c58c4d2",
+        "size_in_bytes": 66759
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/__pycache__/http1connection_test.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "07280090a6dc26fe9d8eaa990e09d2529226f346002bfbc97600ad1420f07dd7",
+        "sha256_in_prefix": "07280090a6dc26fe9d8eaa990e09d2529226f346002bfbc97600ad1420f07dd7",
+        "size_in_bytes": 4352
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/__pycache__/httpclient_test.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "7844d7e97182e3b33212840f483d811f4f33bdbe315a7c6de255cdfac4d78c74",
+        "sha256_in_prefix": "7844d7e97182e3b33212840f483d811f4f33bdbe315a7c6de255cdfac4d78c74",
+        "size_in_bytes": 53485
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/__pycache__/httpserver_test.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "a9a765a950ea7f37c9cd72e74e0570f0ad23a8b426ffaabcbfe4523097f79ab0",
+        "sha256_in_prefix": "a9a765a950ea7f37c9cd72e74e0570f0ad23a8b426ffaabcbfe4523097f79ab0",
+        "size_in_bytes": 95411
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/__pycache__/httputil_test.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "9e499d907a26b976a3a7a4ddb7324751ede33e2dee6ef361d3171241ca28bc0e",
+        "sha256_in_prefix": "9e499d907a26b976a3a7a4ddb7324751ede33e2dee6ef361d3171241ca28bc0e",
+        "size_in_bytes": 28070
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/__pycache__/import_test.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "98af7044fb1e21cf48de78418421210000c952b67ecd346994bdf88706056f23",
+        "sha256_in_prefix": "98af7044fb1e21cf48de78418421210000c952b67ecd346994bdf88706056f23",
+        "size_in_bytes": 3095
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/__pycache__/ioloop_test.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "26efcb0a2ffc15aba28e550e0e64fa73c36ab7056ff3814a8c07b463c6198eb4",
+        "sha256_in_prefix": "26efcb0a2ffc15aba28e550e0e64fa73c36ab7056ff3814a8c07b463c6198eb4",
+        "size_in_bytes": 50154
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/__pycache__/iostream_test.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "e70415c0eff4c50eba53f037c9571a46f3ea8226be033410c7aab9a8578396a6",
+        "sha256_in_prefix": "e70415c0eff4c50eba53f037c9571a46f3ea8226be033410c7aab9a8578396a6",
+        "size_in_bytes": 83782
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/__pycache__/locale_test.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "01272e7195c76bffd4e836361842aa1417369b3ce29b75fdcdf8bfc970c7552f",
+        "sha256_in_prefix": "01272e7195c76bffd4e836361842aa1417369b3ce29b75fdcdf8bfc970c7552f",
+        "size_in_bytes": 11201
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/__pycache__/locks_test.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "df47ba06fc64c8205e672d8f9235486885f8467b6050a7adf7aaf8c9601a69fe",
+        "sha256_in_prefix": "df47ba06fc64c8205e672d8f9235486885f8467b6050a7adf7aaf8c9601a69fe",
+        "size_in_bytes": 34894
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/__pycache__/log_test.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "adc4fd670cc49e3d1769bdc4621d61e20da4dca9f4b39e548629359072464099",
+        "sha256_in_prefix": "adc4fd670cc49e3d1769bdc4621d61e20da4dca9f4b39e548629359072464099",
+        "size_in_bytes": 15031
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/__pycache__/netutil_test.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "2eef69d73656e361c1710739313a9542a05732ebac171b579fa97bd30bc03ed5",
+        "sha256_in_prefix": "2eef69d73656e361c1710739313a9542a05732ebac171b579fa97bd30bc03ed5",
+        "size_in_bytes": 14351
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/__pycache__/options_test.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "c74d84c079e19b6c5a5d5b24eb0c1c589273bf3ced5791fb33cf5ff8190db0e5",
+        "sha256_in_prefix": "c74d84c079e19b6c5a5d5b24eb0c1c589273bf3ced5791fb33cf5ff8190db0e5",
+        "size_in_bytes": 19853
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/__pycache__/process_test.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "64ec7c7fb092b3feb929ac697ecef9ac23e075c86ef4938d258c6ca507278c32",
+        "sha256_in_prefix": "64ec7c7fb092b3feb929ac697ecef9ac23e075c86ef4938d258c6ca507278c32",
+        "size_in_bytes": 15162
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/__pycache__/queues_test.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "5c9bac50e246d34fb7f3f1c878cf1c335da4996bbb207adbe77b988f6f50c2c0",
+        "sha256_in_prefix": "5c9bac50e246d34fb7f3f1c878cf1c335da4996bbb207adbe77b988f6f50c2c0",
+        "size_in_bytes": 28153
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/__pycache__/resolve_test_helper.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "f7bc14c3fd20d35fabbf0990ae471e48650b5a44ee0ed786a513bff564b9194e",
+        "sha256_in_prefix": "f7bc14c3fd20d35fabbf0990ae471e48650b5a44ee0ed786a513bff564b9194e",
+        "size_in_bytes": 575
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/__pycache__/routing_test.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "8a3a895ca7b65fe06070a667040f7e8810069c0f9a6ed56553c940fa1d87f443",
+        "sha256_in_prefix": "8a3a895ca7b65fe06070a667040f7e8810069c0f9a6ed56553c940fa1d87f443",
+        "size_in_bytes": 15631
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/__pycache__/runtests.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "e576c57cc463c7449e58b6b4ef573ed28a0bd9af24b267794460ed21b5fa5c3c",
+        "sha256_in_prefix": "e576c57cc463c7449e58b6b4ef573ed28a0bd9af24b267794460ed21b5fa5c3c",
+        "size_in_bytes": 10187
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/__pycache__/simple_httpclient_test.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "d994a1a632f7cf9b78ca8b97f22e2646205f23bb1815c78fe821a58b7c1d9dbd",
+        "sha256_in_prefix": "d994a1a632f7cf9b78ca8b97f22e2646205f23bb1815c78fe821a58b7c1d9dbd",
+        "size_in_bytes": 61079
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/__pycache__/tcpclient_test.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "7f0af8e5cb60842192235dd8406934aa5eba93ba2bf9d99126ea21352c960235",
+        "sha256_in_prefix": "7f0af8e5cb60842192235dd8406934aa5eba93ba2bf9d99126ea21352c960235",
+        "size_in_bytes": 30176
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/__pycache__/tcpserver_test.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "51b54a0e8455a6ffdf84cc7e887db5abdb33e67dabf4b5b16ad0c2f65e953359",
+        "sha256_in_prefix": "51b54a0e8455a6ffdf84cc7e887db5abdb33e67dabf4b5b16ad0c2f65e953359",
+        "size_in_bytes": 11614
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/__pycache__/template_test.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "0871c31b3e695c07594f229643c1feeabf5829773ddfb3a6ebee1e1779d6c718",
+        "sha256_in_prefix": "0871c31b3e695c07594f229643c1feeabf5829773ddfb3a6ebee1e1779d6c718",
+        "size_in_bytes": 28434
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/__pycache__/testing_test.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "8ad1841ea0153db90c1313f815e863d469aec3328e034eef3d97141d5a810d86",
+        "sha256_in_prefix": "8ad1841ea0153db90c1313f815e863d469aec3328e034eef3d97141d5a810d86",
+        "size_in_bytes": 21674
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/__pycache__/twisted_test.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "f27eafc46d8958ab125d28d06a548fbd4edc6b90cee42ce11a1594396d7a763d",
+        "sha256_in_prefix": "f27eafc46d8958ab125d28d06a548fbd4edc6b90cee42ce11a1594396d7a763d",
+        "size_in_bytes": 2083
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/__pycache__/util.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "8f2212f5c6be7f4039592befa61f2cfa08d0f51474a39b16d74303926ba525ec",
+        "sha256_in_prefix": "8f2212f5c6be7f4039592befa61f2cfa08d0f51474a39b16d74303926ba525ec",
+        "size_in_bytes": 4626
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/__pycache__/util_test.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "47d707e2288f1d81d61c551b71a9954eccbf48036c5f375c6d28c5e5273de116",
+        "sha256_in_prefix": "47d707e2288f1d81d61c551b71a9954eccbf48036c5f375c6d28c5e5273de116",
+        "size_in_bytes": 18361
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/__pycache__/web_test.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "f3e8a60bf4dbe024211cfec81e2e6a3461fb9e4acd482507add4d546b8fb86f5",
+        "sha256_in_prefix": "f3e8a60bf4dbe024211cfec81e2e6a3461fb9e4acd482507add4d546b8fb86f5",
+        "size_in_bytes": 205112
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/__pycache__/websocket_test.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "0ddea03e60cdeb11947a9fb23233ba6c4e695539df087bc4b30bfe89eed44d84",
+        "sha256_in_prefix": "0ddea03e60cdeb11947a9fb23233ba6c4e695539df087bc4b30bfe89eed44d84",
+        "size_in_bytes": 54967
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/__pycache__/wsgi_test.cpython-313.pyc",
+        "path_type": "hardlink",
+        "sha256": "76a698b4a056b9836dd69f3c43f85fc1c516fb14b91415db730170a43be087f6",
+        "sha256_in_prefix": "76a698b4a056b9836dd69f3c43f85fc1c516fb14b91415db730170a43be087f6",
+        "size_in_bytes": 7548
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/asyncio_test.py",
+        "path_type": "hardlink",
+        "sha256": "d0a953f0bc6e0ec0aa38dcb21da79afffd70eb248cf8820956f2da71c62885b7",
+        "sha256_in_prefix": "d0a953f0bc6e0ec0aa38dcb21da79afffd70eb248cf8820956f2da71c62885b7",
+        "size_in_bytes": 10481
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/auth_test.py",
+        "path_type": "hardlink",
+        "sha256": "8f1658adaf2bcfd5f2592258cdefe8158fb439f6dc3c44eab7d130d908eb96ab",
+        "sha256_in_prefix": "8f1658adaf2bcfd5f2592258cdefe8158fb439f6dc3c44eab7d130d908eb96ab",
+        "size_in_bytes": 23347
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/autoreload_test.py",
+        "path_type": "hardlink",
+        "sha256": "1dceea649297ac18e15ee544b831ae97879fbdb4dddbd1c895e06672d887d22f",
+        "sha256_in_prefix": "1dceea649297ac18e15ee544b831ae97879fbdb4dddbd1c895e06672d887d22f",
+        "size_in_bytes": 8971
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/circlerefs_test.py",
+        "path_type": "hardlink",
+        "sha256": "dc26fea657fd6814f89066904c0144eb8edd208f1793119b8edb42abf011fe43",
+        "sha256_in_prefix": "dc26fea657fd6814f89066904c0144eb8edd208f1793119b8edb42abf011fe43",
+        "size_in_bytes": 7337
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/concurrent_test.py",
+        "path_type": "hardlink",
+        "sha256": "303771111015ebec649fa2b5306f4d81b71acb6d09d8d612edc4be425de2c38d",
+        "sha256_in_prefix": "303771111015ebec649fa2b5306f4d81b71acb6d09d8d612edc4be425de2c38d",
+        "size_in_bytes": 6049
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/csv_translations/fr_FR.csv",
+        "path_type": "hardlink",
+        "sha256": "d14b0ccdf875730df241d852ee90a645f4280246ea5a9833ce876966aa7bb6d3",
+        "sha256_in_prefix": "d14b0ccdf875730df241d852ee90a645f4280246ea5a9833ce876966aa7bb6d3",
+        "size_in_bytes": 18
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/curl_httpclient_test.py",
+        "path_type": "hardlink",
+        "sha256": "8555ee22adf621d073f3f50e3aebab51019b7cc80ba496f5d60845ff093b9784",
+        "sha256_in_prefix": "8555ee22adf621d073f3f50e3aebab51019b7cc80ba496f5d60845ff093b9784",
+        "size_in_bytes": 4303
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/escape_test.py",
+        "path_type": "hardlink",
+        "sha256": "59361da0325b31b1035199fbc31a23fec419f8600c1f84d08ae8300a013bc00d",
+        "sha256_in_prefix": "59361da0325b31b1035199fbc31a23fec419f8600c1f84d08ae8300a013bc00d",
+        "size_in_bytes": 12336
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/gen_test.py",
+        "path_type": "hardlink",
+        "sha256": "a1600e3c756ee61702a29f5fcf023f9a5006a205f2dd2cbcb767ee9d9357a1a6",
+        "sha256_in_prefix": "a1600e3c756ee61702a29f5fcf023f9a5006a205f2dd2cbcb767ee9d9357a1a6",
+        "size_in_bytes": 34093
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/gettext_translations/fr_FR/LC_MESSAGES/tornado_test.mo",
+        "path_type": "hardlink",
+        "sha256": "7e5d19559225370c14f653f1dbda606785fe1dfc84558a6126eed45ad965ee3a",
+        "sha256_in_prefix": "7e5d19559225370c14f653f1dbda606785fe1dfc84558a6126eed45ad965ee3a",
+        "size_in_bytes": 665
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/gettext_translations/fr_FR/LC_MESSAGES/tornado_test.po",
+        "path_type": "hardlink",
+        "sha256": "0a5c3a1f2414728a46576e6ac37a6fc37827d59a99458ae8bec8bc3d04d00273",
+        "sha256_in_prefix": "0a5c3a1f2414728a46576e6ac37a6fc37827d59a99458ae8bec8bc3d04d00273",
+        "size_in_bytes": 1049
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/http1connection_test.py",
+        "path_type": "hardlink",
+        "sha256": "d0baf8ef0c94e2c1ac1b848d59a4c85a382400829e2bef0e1394985975a812a7",
+        "sha256_in_prefix": "d0baf8ef0c94e2c1ac1b848d59a4c85a382400829e2bef0e1394985975a812a7",
+        "size_in_bytes": 1964
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/httpclient_test.py",
+        "path_type": "hardlink",
+        "sha256": "206d2d712b99a524d41e151aa9cecd741078637b348f20371ed1fc1e2c410ed8",
+        "sha256_in_prefix": "206d2d712b99a524d41e151aa9cecd741078637b348f20371ed1fc1e2c410ed8",
+        "size_in_bytes": 35986
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/httpserver_test.py",
+        "path_type": "hardlink",
+        "sha256": "cdf866ae6fecac6d62968e4a80b1784af4033e5672504f4a8880f96fe445e2f1",
+        "sha256_in_prefix": "cdf866ae6fecac6d62968e4a80b1784af4033e5672504f4a8880f96fe445e2f1",
+        "size_in_bytes": 52223
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/httputil_test.py",
+        "path_type": "hardlink",
+        "sha256": "aa0c4ba3d566c004fa02bae693ef72a0ce412cbb2110a4ee0ff0f56efc5d3076",
+        "sha256_in_prefix": "aa0c4ba3d566c004fa02bae693ef72a0ce412cbb2110a4ee0ff0f56efc5d3076",
+        "size_in_bytes": 20658
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/import_test.py",
+        "path_type": "hardlink",
+        "sha256": "cbbffd671860a05ff90093641678ca35a8169596a8d6a86575c3d0e900df5d44",
+        "sha256_in_prefix": "cbbffd671860a05ff90093641678ca35a8169596a8d6a86575c3d0e900df5d44",
+        "size_in_bytes": 2231
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/ioloop_test.py",
+        "path_type": "hardlink",
+        "sha256": "ea5da2bb26cdbf262cff43946e961d9157d0e49874ee3b51c4dc3baed55154c2",
+        "sha256_in_prefix": "ea5da2bb26cdbf262cff43946e961d9157d0e49874ee3b51c4dc3baed55154c2",
+        "size_in_bytes": 27484
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/iostream_test.py",
+        "path_type": "hardlink",
+        "sha256": "c25f1738554f1b9e007361366dd97c8d5b2224349794fa548735a8c9564b390b",
+        "sha256_in_prefix": "c25f1738554f1b9e007361366dd97c8d5b2224349794fa548735a8c9564b390b",
+        "size_in_bytes": 50551
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/locale_test.py",
+        "path_type": "hardlink",
+        "sha256": "6d6d68a1e833069aaff48cb89bb079b095aa90c6bcd7038327d033b3f25b252f",
+        "sha256_in_prefix": "6d6d68a1e833069aaff48cb89bb079b095aa90c6bcd7038327d033b3f25b252f",
+        "size_in_bytes": 6359
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/locks_test.py",
+        "path_type": "hardlink",
+        "sha256": "9c6c995045bbaf614c9df2ea8a14b3bfa17f5a5c59a125b228329af9c9ea17e8",
+        "sha256_in_prefix": "9c6c995045bbaf614c9df2ea8a14b3bfa17f5a5c59a125b228329af9c9ea17e8",
+        "size_in_bytes": 17010
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/log_test.py",
+        "path_type": "hardlink",
+        "sha256": "6039b05a6b220c733ee29b57b131e88ee578637cfcae1336026fd6eb49bd864f",
+        "sha256_in_prefix": "6039b05a6b220c733ee29b57b131e88ee578637cfcae1336026fd6eb49bd864f",
+        "size_in_bytes": 8918
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/netutil_test.py",
+        "path_type": "hardlink",
+        "sha256": "99cf0b0a0bc7af847cb2baed222e117c7d08ee6bac386ad3173ac88231f3fcd6",
+        "sha256_in_prefix": "99cf0b0a0bc7af847cb2baed222e117c7d08ee6bac386ad3173ac88231f3fcd6",
+        "size_in_bytes": 8334
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/options_test.cfg",
+        "path_type": "hardlink",
+        "sha256": "4a952ea64f8c7d704c84b10da97983f8ae5ad8ca7cf3c444a9f20242ea5c82a7",
+        "sha256_in_prefix": "4a952ea64f8c7d704c84b10da97983f8ae5ad8ca7cf3c444a9f20242ea5c82a7",
+        "size_in_bytes": 69
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/options_test.py",
+        "path_type": "hardlink",
+        "sha256": "5d6cab6073a264ea06cba113d2506002a615f4a7e65a589204234b7f567a8725",
+        "sha256_in_prefix": "5d6cab6073a264ea06cba113d2506002a615f4a7e65a589204234b7f567a8725",
+        "size_in_bytes": 11932
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/options_test_types.cfg",
+        "path_type": "hardlink",
+        "sha256": "d7bb00b9b4438a7617fc34617426952745295f501e7d9f68ff0436ca9315c0bd",
+        "sha256_in_prefix": "d7bb00b9b4438a7617fc34617426952745295f501e7d9f68ff0436ca9315c0bd",
+        "size_in_bytes": 296
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/options_test_types_str.cfg",
+        "path_type": "hardlink",
+        "sha256": "ca922876bb69ca6497d87b1ebc6249e00d3ba0b89f6f97df901212a20dfae2aa",
+        "sha256_in_prefix": "ca922876bb69ca6497d87b1ebc6249e00d3ba0b89f6f97df901212a20dfae2aa",
+        "size_in_bytes": 172
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/process_test.py",
+        "path_type": "hardlink",
+        "sha256": "58535554c181e319a235b06c9a6ccdd61b02ee2dced8c33452415efaf68f3be8",
+        "sha256_in_prefix": "58535554c181e319a235b06c9a6ccdd61b02ee2dced8c33452415efaf68f3be8",
+        "size_in_bytes": 11308
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/queues_test.py",
+        "path_type": "hardlink",
+        "sha256": "1064d5d7f04c2b78138e5ac5132a90135144d9633d08f03a0fb363db42768bb7",
+        "sha256_in_prefix": "1064d5d7f04c2b78138e5ac5132a90135144d9633d08f03a0fb363db42768bb7",
+        "size_in_bytes": 13981
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/resolve_test_helper.py",
+        "path_type": "hardlink",
+        "sha256": "ad388e302e0a568ff6d57bec2e1b626428daaae93fcede8354cfe10b208cef21",
+        "sha256_in_prefix": "ad388e302e0a568ff6d57bec2e1b626428daaae93fcede8354cfe10b208cef21",
+        "size_in_bytes": 410
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/routing_test.py",
+        "path_type": "hardlink",
+        "sha256": "616646b58a765158f655ff9ed4a61d857cf7e4c803d33c0d5cbcbb21260ed10d",
+        "sha256_in_prefix": "616646b58a765158f655ff9ed4a61d857cf7e4c803d33c0d5cbcbb21260ed10d",
+        "size_in_bytes": 8827
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/runtests.py",
+        "path_type": "hardlink",
+        "sha256": "f08fb456ce38821241ff9e829a8842b67ae95bef4a56a1ad42cf1305817f2e4f",
+        "sha256_in_prefix": "f08fb456ce38821241ff9e829a8842b67ae95bef4a56a1ad42cf1305817f2e4f",
+        "size_in_bytes": 6990
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/simple_httpclient_test.py",
+        "path_type": "hardlink",
+        "sha256": "ef375db29f235c53e6fb2d80970c17fa40fd7aef8b25d2082a4045e47f5af922",
+        "sha256_in_prefix": "ef375db29f235c53e6fb2d80970c17fa40fd7aef8b25d2082a4045e47f5af922",
+        "size_in_bytes": 31108
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/static/dir/index.html",
+        "path_type": "hardlink",
+        "sha256": "b41c016a75128c8494cb40556a7fd034a91874b6aef2ab3ffcfd06f680223fbf",
+        "sha256_in_prefix": "b41c016a75128c8494cb40556a7fd034a91874b6aef2ab3ffcfd06f680223fbf",
+        "size_in_bytes": 18
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/static/robots.txt",
+        "path_type": "hardlink",
+        "sha256": "331ea9090db0c9f6f597bd9840fd5b171830f6e0b3ba1cb24dfa91f0c95aedc1",
+        "sha256_in_prefix": "331ea9090db0c9f6f597bd9840fd5b171830f6e0b3ba1cb24dfa91f0c95aedc1",
+        "size_in_bytes": 26
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/static/sample.xml",
+        "path_type": "hardlink",
+        "sha256": "ecb7937f5e81583b9c8a9b1469964aee80f1b4a10c0c7f6c16db0d4751baa4c1",
+        "sha256_in_prefix": "ecb7937f5e81583b9c8a9b1469964aee80f1b4a10c0c7f6c16db0d4751baa4c1",
+        "size_in_bytes": 666
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/static/sample.xml.bz2",
+        "path_type": "hardlink",
+        "sha256": "d9097971c5a7692a43753ca2a229e8ec1c3f75c185906fd140ee4b9b971f4fa0",
+        "sha256_in_prefix": "d9097971c5a7692a43753ca2a229e8ec1c3f75c185906fd140ee4b9b971f4fa0",
+        "size_in_bytes": 285
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/static/sample.xml.gz",
+        "path_type": "hardlink",
+        "sha256": "fc0a69d302a99f7d6565503d3ffaec972b4f9b87a2e46bcd3d52a1e79afb976f",
+        "sha256_in_prefix": "fc0a69d302a99f7d6565503d3ffaec972b4f9b87a2e46bcd3d52a1e79afb976f",
+        "size_in_bytes": 264
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/static_foo.txt",
+        "path_type": "hardlink",
+        "sha256": "0dd00a001cc76fc92e9c6ac0bd4a132e71e581d4cdfbafcf8c7d62ad59a8926f",
+        "sha256_in_prefix": "0dd00a001cc76fc92e9c6ac0bd4a132e71e581d4cdfbafcf8c7d62ad59a8926f",
+        "size_in_bytes": 95
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/tcpclient_test.py",
+        "path_type": "hardlink",
+        "sha256": "433583365f36fa8ad03d5612b1ad8f54658ab8374a525f25bfb8ba31cefee33a",
+        "sha256_in_prefix": "433583365f36fa8ad03d5612b1ad8f54658ab8374a525f25bfb8ba31cefee33a",
+        "size_in_bytes": 16847
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/tcpserver_test.py",
+        "path_type": "hardlink",
+        "sha256": "10168d210e3dafb587b5b22e8149b5147e6684bc98a111a7ee59514f3ef4acb6",
+        "sha256_in_prefix": "10168d210e3dafb587b5b22e8149b5147e6684bc98a111a7ee59514f3ef4acb6",
+        "size_in_bytes": 7720
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/template_test.py",
+        "path_type": "hardlink",
+        "sha256": "4598b680cdc89ea15f35926c19bacc94f2a903eef4f7eda3c8fb45aa52b53543",
+        "sha256_in_prefix": "4598b680cdc89ea15f35926c19bacc94f2a903eef4f7eda3c8fb45aa52b53543",
+        "size_in_bytes": 18657
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/templates/utf8.html",
+        "path_type": "hardlink",
+        "sha256": "f5dd5e89ac392828d44c26d144897f44b4b2d0b0895da3be6f3545d8bff7d9f3",
+        "sha256_in_prefix": "f5dd5e89ac392828d44c26d144897f44b4b2d0b0895da3be6f3545d8bff7d9f3",
+        "size_in_bytes": 7
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/test.crt",
+        "path_type": "hardlink",
+        "sha256": "6702d3f46ec174de6845c083e3c9be88013d253f12092a243d5cc960cc3dbafa",
+        "sha256_in_prefix": "6702d3f46ec174de6845c083e3c9be88013d253f12092a243d5cc960cc3dbafa",
+        "size_in_bytes": 1042
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/test.key",
+        "path_type": "hardlink",
+        "sha256": "2c95ec86909e3299af80778674140159a44c2b8c8422f31a82e81d40572f0c74",
+        "sha256_in_prefix": "2c95ec86909e3299af80778674140159a44c2b8c8422f31a82e81d40572f0c74",
+        "size_in_bytes": 1708
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/testing_test.py",
+        "path_type": "hardlink",
+        "sha256": "d0acff2297df4648b413719b3f940f7bb5d4923e27969efb8e3339290d29c26e",
+        "sha256_in_prefix": "d0acff2297df4648b413719b3f940f7bb5d4923e27969efb8e3339290d29c26e",
+        "size_in_bytes": 10509
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/twisted_test.py",
+        "path_type": "hardlink",
+        "sha256": "aa6c1db91d908f744c742357d5fcbc85e6563fd2ea21f353ebd1bad6ef63485b",
+        "sha256_in_prefix": "aa6c1db91d908f744c742357d5fcbc85e6563fd2ea21f353ebd1bad6ef63485b",
+        "size_in_bytes": 1732
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/util.py",
+        "path_type": "hardlink",
+        "sha256": "2e801d0c32d96a2e0be3995ee1b312901ab676b41e826dc229d2d83a438fc184",
+        "sha256_in_prefix": "2e801d0c32d96a2e0be3995ee1b312901ab676b41e826dc229d2d83a438fc184",
+        "size_in_bytes": 3654
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/util_test.py",
+        "path_type": "hardlink",
+        "sha256": "4fb2f0c1d0d19f1bb1b2d4eea24ce06d65149c50a6354c19a618913931cc3025",
+        "sha256_in_prefix": "4fb2f0c1d0d19f1bb1b2d4eea24ce06d65149c50a6354c19a618913931cc3025",
+        "size_in_bytes": 9771
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/web_test.py",
+        "path_type": "hardlink",
+        "sha256": "a6da39a918e7a7b46e3a6c94687f115ea9d14e5803b3db59618a085e4cae8f6c",
+        "sha256_in_prefix": "a6da39a918e7a7b46e3a6c94687f115ea9d14e5803b3db59618a085e4cae8f6c",
+        "size_in_bytes": 121646
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/websocket_test.py",
+        "path_type": "hardlink",
+        "sha256": "89c3b2fab78c01d4f6d62cb9eecbfd002e81e7a338682c3eeacbdf89c8edca7e",
+        "sha256_in_prefix": "89c3b2fab78c01d4f6d62cb9eecbfd002e81e7a338682c3eeacbdf89c8edca7e",
+        "size_in_bytes": 29435
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/test/wsgi_test.py",
+        "path_type": "hardlink",
+        "sha256": "b5025aee4090e821c2aab63390171b0e38f0977aa2a6c8da8a536b7152608b6a",
+        "sha256_in_prefix": "b5025aee4090e821c2aab63390171b0e38f0977aa2a6c8da8a536b7152608b6a",
+        "size_in_bytes": 3918
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/testing.py",
+        "path_type": "hardlink",
+        "sha256": "a55a291368005c30e9d02ed0ee2aaef260a53c8d41b070094c422b1e6c57679d",
+        "sha256_in_prefix": "a55a291368005c30e9d02ed0ee2aaef260a53c8d41b070094c422b1e6c57679d",
+        "size_in_bytes": 32856
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/util.py",
+        "path_type": "hardlink",
+        "sha256": "fd314c2d0975e6d55e2ac74d5cbd546fce484c2480fc61b3c9d20cad05ffc6e6",
+        "sha256_in_prefix": "fd314c2d0975e6d55e2ac74d5cbd546fce484c2480fc61b3c9d20cad05ffc6e6",
+        "size_in_bytes": 16249
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/web.py",
+        "path_type": "hardlink",
+        "sha256": "7f4696a1f8cdacd220bf39fa6e70af4b3f8d663cf54eeee2a09d6dd3eebae8df",
+        "sha256_in_prefix": "7f4696a1f8cdacd220bf39fa6e70af4b3f8d663cf54eeee2a09d6dd3eebae8df",
+        "size_in_bytes": 143248
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/websocket.py",
+        "path_type": "hardlink",
+        "sha256": "cc7b3997fe70a5730c1806b2fcf6dc759cf96152cffe6368408fda0dd52470c4",
+        "sha256_in_prefix": "cc7b3997fe70a5730c1806b2fcf6dc759cf96152cffe6368408fda0dd52470c4",
+        "size_in_bytes": 61715
+      },
+      {
+        "_path": "lib/python3.13/site-packages/tornado/wsgi.py",
+        "path_type": "hardlink",
+        "sha256": "93a5830ca3f6c26c8c4e341dbf4998d85e5269d15cb9323a80e9968d58326ee4",
+        "sha256_in_prefix": "93a5830ca3f6c26c8c4e341dbf4998d85e5269d15cb9323a80e9968d58326ee4",
+        "size_in_bytes": 10817
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "ad2b8d049ad38ddee595766044a8dcfa9b30dda2b078bd836db7d1379bf93824",
+  "size": 855521,
+  "subdir": "osx-arm64",
+  "timestamp": 1728585692000,
+  "url": "https://repo.anaconda.com/pkgs/main/osx-arm64/tornado-6.4.1-py313h80987f9_0.conda",
+  "version": "6.4.1"
+}
