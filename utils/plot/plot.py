@@ -5,7 +5,7 @@ from matplotlib.patches import Wedge
 
 
 
-def plot_save_graph(G, k, lambda_param, min_subset_size, max_subset_size, title="Graph"):
+def plot_save_graph(G, k, lambda_param, min_subset_size, max_subset_size, k_hop, title="Graph"):
     """
     Visualize the original graph. 
     
@@ -24,12 +24,13 @@ def plot_save_graph(G, k, lambda_param, min_subset_size, max_subset_size, title=
     plt.figure(figsize=(12, 10))
     nx.draw(G, pos, with_labels=True, node_color='lightblue', edge_color='gray', node_size=500, font_size=10)
     plt.title(title+f"minimum-{min_subset_size}_maximum-{max_subset_size}_k-{k}_lambda-{lambda_param}")
-    plt.savefig(f"./results/original_graph_minimum-{min_subset_size}_maximum-{max_subset_size}_k-{k}_lambda-{lambda_param}.png")
+    plt.savefig(f"./results/original_graph_k={k}_minimum={min_subset_size}_maximum={max_subset_size}_lambda={lambda_param}_hop={k_hop}.png")
     plt.show()
     
 
-    
-def plot_save_subgraphs(G, subgraphs, k, lambda_param, min_subset_size, max_subset_size):
+
+
+def plot_save_subgraphs(G, subgraphs, k, lambda_param, min_subset_size, max_subset_size, k_hop):
     """
     Visualizes subgraphs with multicolored nodes representing their membership in multiple subgraphs.
     
@@ -40,10 +41,12 @@ def plot_save_subgraphs(G, subgraphs, k, lambda_param, min_subset_size, max_subs
     Returns:
         Displays the graph with multicolored nodes.
     """
+    # Use the same layout positions for both the original graph and subgraphs
     pos = nx.spring_layout(G)  # Get positions of nodes
+    
     fig, ax = plt.subplots(figsize=(14, 12))
     
-    # Draw the base graph in light gray
+    # Draw the base graph in light gray (same as original graph)
     nx.draw(G, pos, with_labels=True, node_color='lightgray', edge_color='lightgray', 
             node_size=500, font_size=10, ax=ax)
     
@@ -57,21 +60,21 @@ def plot_save_subgraphs(G, subgraphs, k, lambda_param, min_subset_size, max_subs
         for node in subgraph.nodes:
             node_membership[node].append(color)
 
-    # Draw multicolored nodes
+    # Draw multicolored nodes based on subgraph membership
     for node, position in pos.items():
         x, y = position
         node_colors = node_membership[node]
-        total_segments = len(node_colors)
-        for i, color in enumerate(node_colors):
-            wedge = Wedge(center=(x, y), r=0.1, 
-                          theta1=(i * 360 / total_segments),
-                          theta2=((i + 1) * 360 / total_segments), 
-                          facecolor=color)
-            ax.add_patch(wedge)
+        
+        if node_colors:
+            total_segments = len(node_colors)
+            for i, color in enumerate(node_colors):
+                wedge = Wedge(center=(x, y), r=0.05, 
+                              theta1=(i * 360 / total_segments),
+                              theta2=((i + 1) * 360 / total_segments), 
+                              facecolor=color, edgecolor='black', lw=1)
+                ax.add_patch(wedge)
     
-    plt.title("Subgraphs with Multicolored Nodes"+f"minimum-{min_subset_size}_maximum-{max_subset_size}_k-{k}_lambda-{lambda_param}")
+    plt.title("Subgraphs with Multicolored Nodes" + f" minimum-{min_subset_size}_maximum-{max_subset_size}_k-{k}_lambda-{lambda_param}")
     plt.axis("equal")
-    plt.savefig(f"./results/subgraph_minimum-{min_subset_size}_maximum-{max_subset_size}_k-{k}_lambda-{lambda_param}.png")
+    plt.savefig(f"./results/subgraph_k={k}_minimum={min_subset_size}_maximum={max_subset_size}_lambda={lambda_param}_hop={k_hop}.png")
     plt.show()
-    
-

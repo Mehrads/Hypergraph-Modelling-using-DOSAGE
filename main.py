@@ -21,10 +21,10 @@ if __name__ == "__main__":
 
     # Parameters
     k = 3
-    lambda_param = 1
-    min_subset_size = 13
+    lambda_param = 0.5
+    min_subset_size = 10
     max_subset_size = 20
-    k_hop = 3
+    k_hop = 1
 
     # Find the top-k overlapping densest subgraphs
     subgraphs = top_k_overlapping_densest_subgraphs(G, k, lambda_param, min_subset_size, max_subset_size, k_hop)
@@ -34,5 +34,5 @@ if __name__ == "__main__":
         print(f"Subgraph {i}: Nodes = {sg.nodes()}, Edges = {sg.edges()}")
 
     # Plot the original graph and subgraphs
-    plot_save_graph(G, k, lambda_param, min_subset_size, max_subset_size, title="Original Graph")
-    plot_save_subgraphs(G, subgraphs, k, lambda_param, min_subset_size, max_subset_size)
+    plot_save_graph(G, k, lambda_param, min_subset_size, max_subset_size, k_hop, title="Original Graph")
+    plot_save_subgraphs(G, subgraphs, k, lambda_param, min_subset_size, max_subset_size, k_hop)
