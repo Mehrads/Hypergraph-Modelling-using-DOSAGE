@@ -2,7 +2,7 @@ import networkx as nx
 import numpy as np
 from utils.edge_reader import read_edges_from_file
 from subgraphs.top_k import top_k_overlapping_densest_subgraphs
-from utils.plot.plot import plot_graph, plot_subgraphs
+from utils.plot.plot import plot_save_graph, plot_save_subgraphs
 
 
 if __name__ == "__main__":
@@ -34,5 +34,5 @@ if __name__ == "__main__":
         print(f"Subgraph {i}: Nodes = {sg.nodes()}, Edges = {sg.edges()}")
 
     # Plot the original graph and subgraphs
-    plot_graph(G, "Original Graph")
-    plot_subgraphs(G, subgraphs)
+    plot_save_graph(G, k, lambda_param, min_subset_size, max_subset_size, title="Original Graph")
+    plot_save_subgraphs(G, subgraphs, k, lambda_param, min_subset_size, max_subset_size)

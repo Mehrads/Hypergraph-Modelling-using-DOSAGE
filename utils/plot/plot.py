@@ -5,7 +5,7 @@ from matplotlib.patches import Wedge
 
 
 
-def plot_graph(G, title="Graph"):
+def plot_save_graph(G, k, lambda_param, min_subset_size, max_subset_size, title="Graph"):
     """
     Visualize the original graph. 
     
@@ -23,11 +23,13 @@ def plot_graph(G, title="Graph"):
     pos = nx.spring_layout(G)
     plt.figure(figsize=(12, 10))
     nx.draw(G, pos, with_labels=True, node_color='lightblue', edge_color='gray', node_size=500, font_size=10)
-    plt.title(title)
+    plt.title(title+f"minimum-{min_subset_size}_maximum-{max_subset_size}_k-{k}_lambda-{lambda_param}")
+    plt.savefig(f"./results/original_graph_minimum-{min_subset_size}_maximum-{max_subset_size}_k-{k}_lambda-{lambda_param}.png")
     plt.show()
+    
 
     
-def plot_subgraphs(G, subgraphs):
+def plot_save_subgraphs(G, subgraphs, k, lambda_param, min_subset_size, max_subset_size):
     """
     Visualizes subgraphs with multicolored nodes representing their membership in multiple subgraphs.
     
@@ -67,6 +69,9 @@ def plot_subgraphs(G, subgraphs):
                           facecolor=color)
             ax.add_patch(wedge)
     
-    plt.title("Subgraphs with Multicolored Nodes")
+    plt.title("Subgraphs with Multicolored Nodes"+f"minimum-{min_subset_size}_maximum-{max_subset_size}_k-{k}_lambda-{lambda_param}")
     plt.axis("equal")
+    plt.savefig(f"./results/subgraph_minimum-{min_subset_size}_maximum-{max_subset_size}_k-{k}_lambda-{lambda_param}.png")
     plt.show()
+    
+
