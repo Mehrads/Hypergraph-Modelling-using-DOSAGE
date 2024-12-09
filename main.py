@@ -3,6 +3,7 @@ import numpy as np
 from utils.edge_reader import read_edges_from_file
 from subgraphs.top_k import top_k_overlapping_densest_subgraphs
 from utils.plot.plot import plot_save_graph, plot_save_subgraphs
+from utils.plot.hypergraph_plot import plot_save_hypergraph
 
 
 if __name__ == "__main__":
@@ -20,7 +21,7 @@ if __name__ == "__main__":
       G.nodes[node]['features'] = np.array([degree, clustering_coeff, random_feature])
 
     # Parameters
-    k = 3
+    k = 2
     lambda_param = 0.5
     min_subset_size = 10
     max_subset_size = 20
@@ -28,11 +29,19 @@ if __name__ == "__main__":
 
     # Find the top-k overlapping densest subgraphs
     subgraphs = top_k_overlapping_densest_subgraphs(G, k, lambda_param, min_subset_size, max_subset_size, k_hop)
+    
+    # Instantiating a dictionary for assing nodes to each subgraph
+    hyper_dic = {}
 
     print(f"Found {len(subgraphs)} subgraphs:")
     for i, sg in enumerate(subgraphs, 1):
         print(f"Subgraph {i}: Nodes = {sg.nodes()}, Edges = {sg.edges()}")
+        hyper_dic[f"Subgraph {i}"] = set(sg.nodes())
 
+        
     # Plot the original graph and subgraphs
     plot_save_graph(G, k, lambda_param, min_subset_size, max_subset_size, k_hop, title="Original Graph")
     plot_save_subgraphs(G, subgraphs, k, lambda_param, min_subset_size, max_subset_size, k_hop)
+    
+    # Plot the hypergraph
+    plot_save_hypergraph(hyper_dic, k, lambda_param, min_subset_size, max_subset_size, k_hop)
