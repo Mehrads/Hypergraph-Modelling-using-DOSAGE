@@ -4,6 +4,7 @@ from utils.edge_reader import read_edges_from_file
 from subgraphs.top_k import top_k_overlapping_densest_subgraphs
 from utils.plot.plot import plot_save_graph, plot_save_subgraphs
 from utils.plot.hypergraph_plot import plot_save_hypergraph
+from hypergraph.hypergraph import graph_to_hypergraph
 
 
 if __name__ == "__main__":
@@ -37,8 +38,10 @@ if __name__ == "__main__":
     for i, sg in enumerate(subgraphs, 1):
         print(f"Subgraph {i}: Nodes = {sg.nodes()}, Edges = {sg.edges()}")
         hyper_dic[f"Subgraph {i}"] = set(sg.nodes())
-
-        
+    
+    hypergraph = graph_to_hypergraph(hyper_dic)
+    print(f"Hypergraph whcih is created with hyperedges of ---> {hypergraph.e}")
+    
     # Plot the original graph and subgraphs
     plot_save_graph(G, k, lambda_param, min_subset_size, max_subset_size, k_hop, title="Original Graph")
     plot_save_subgraphs(G, subgraphs, k, lambda_param, min_subset_size, max_subset_size, k_hop)
