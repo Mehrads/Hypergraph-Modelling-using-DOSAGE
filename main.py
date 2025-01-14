@@ -2,6 +2,7 @@ import networkx as nx
 import numpy as np
 from utils.edge_reader import read_edges_from_file
 from utils.outputdir import outputdir
+from utils.savesubgraphs import savesubgraphs, readsubgraphs
 from subgraphs.top_k import top_k_overlapping_densest_subgraphs
 from utils.plot.plot import plot_save_graph, plot_save_subgraphs
 from utils.plot.hypergraph_plot import plot_save_hypergraph
@@ -40,11 +41,18 @@ if __name__ == "__main__":
         print(f"Subgraph {i}: Nodes = {sg.nodes()}, Edges = {sg.edges()}")
         hyper_dic[f"Subgraph {i}"] = set(sg.nodes())
     
+    
     hypergraph = graph_to_hypergraph(hyper_dic)
     print(f"Hypergraph whcih is created with hyperedges of ---> {hypergraph.e}")
     
     # Make directory for saving the output
     path = outputdir(f"Karate_club_K={k}_lambda={lambda_param}")
+    
+    # Save subgraphs into a JSON file
+    subgraphs_json = savesubgraphs(hyper_dic, path) 
+    
+    # Load subgraphs if it is necessary from JSON file
+#     hyper_dic = readsubgraphs(path)
     
     # Plot the original graph and subgraphs
     plot_save_graph(G, k, lambda_param, min_subset_size, max_subset_size, k_hop, path, title="Original Graph")
