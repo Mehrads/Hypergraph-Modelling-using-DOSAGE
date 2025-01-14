@@ -5,7 +5,7 @@ from matplotlib.patches import Wedge
 
 
 
-def plot_save_graph(G, k, lambda_param, min_subset_size, max_subset_size, k_hop, title="Graph"):
+def plot_save_graph(G, k, lambda_param, min_subset_size, max_subset_size, k_hop, path, title="Graph"):
     """
     Visualize the original graph. 
     
@@ -23,14 +23,14 @@ def plot_save_graph(G, k, lambda_param, min_subset_size, max_subset_size, k_hop,
     pos = nx.spring_layout(G)
     plt.figure(figsize=(12, 10))
     nx.draw(G, pos, with_labels=True, node_color='lightblue', edge_color='gray', node_size=500, font_size=10)
-    plt.title(title+f"minimum-{min_subset_size}_maximum-{max_subset_size}_k-{k}_lambda-{lambda_param}")
-    plt.savefig(f"./results/original_graph_k={k}_minimum={min_subset_size}_maximum={max_subset_size}_lambda={lambda_param}_hop={k_hop}.png")
-    plt.show()
+    plt.title(title+f"minimum = {min_subset_size}, maximum = {max_subset_size}, k = {k}, lambda = {lambda_param}")
+    plt.savefig(f"{path}/original_graph.png")
+    plt.close()
     
 
 
 
-def plot_save_subgraphs(G, subgraphs, k, lambda_param, min_subset_size, max_subset_size, k_hop):
+def plot_save_subgraphs(G, subgraphs, k, lambda_param, min_subset_size, max_subset_size, k_hop, path):
     """
     Visualizes subgraphs with multicolored nodes representing their membership in multiple subgraphs.
     
@@ -74,7 +74,7 @@ def plot_save_subgraphs(G, subgraphs, k, lambda_param, min_subset_size, max_subs
                               facecolor=color, edgecolor='black', lw=1)
                 ax.add_patch(wedge)
     
-    plt.title("Subgraphs with Multicolored Nodes" + f" minimum-{min_subset_size}_maximum-{max_subset_size}_k-{k}_lambda-{lambda_param}")
+    plt.title("Subgraphs with Multicolored Nodes" + f" k = {k}, lambda = {lambda_param}, minimum = {min_subset_size}, maximum = {max_subset_size}, hop = {k_hop}")
     plt.axis("equal")
-    plt.savefig(f"./results/subgraph_k={k}_minimum={min_subset_size}_maximum={max_subset_size}_lambda={lambda_param}_hop={k_hop}.png")
-    plt.show()
+    plt.savefig(f"{path}/subgraph_minimum={min_subset_size}_maximum={max_subset_size}_hop={k_hop}.png")
+    plt.close()

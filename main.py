@@ -1,6 +1,7 @@
 import networkx as nx
 import numpy as np
 from utils.edge_reader import read_edges_from_file
+from utils.outputdir import outputdir
 from subgraphs.top_k import top_k_overlapping_densest_subgraphs
 from utils.plot.plot import plot_save_graph, plot_save_subgraphs
 from utils.plot.hypergraph_plot import plot_save_hypergraph
@@ -22,10 +23,10 @@ if __name__ == "__main__":
       G.nodes[node]['features'] = np.array([degree, clustering_coeff, random_feature])
 
     # Parameters
-    k = 2
-    lambda_param = 0.5
-    min_subset_size = 10
-    max_subset_size = 20
+    k = 3
+    lambda_param = 5
+    min_subset_size = 5
+    max_subset_size = 25
     k_hop = 1
 
     # Find the top-k overlapping densest subgraphs
@@ -42,9 +43,12 @@ if __name__ == "__main__":
     hypergraph = graph_to_hypergraph(hyper_dic)
     print(f"Hypergraph whcih is created with hyperedges of ---> {hypergraph.e}")
     
+    # Make directory for saving the output
+    path = outputdir(f"Karate_club_K={k}_lambda={lambda_param}")
+    
     # Plot the original graph and subgraphs
-    plot_save_graph(G, k, lambda_param, min_subset_size, max_subset_size, k_hop, title="Original Graph")
-    plot_save_subgraphs(G, subgraphs, k, lambda_param, min_subset_size, max_subset_size, k_hop)
+    plot_save_graph(G, k, lambda_param, min_subset_size, max_subset_size, k_hop, path, title="Original Graph")
+    plot_save_subgraphs(G, subgraphs, k, lambda_param, min_subset_size, max_subset_size, k_hop, path)
     
     # Plot the hypergraph
-    plot_save_hypergraph(hyper_dic, k, lambda_param, min_subset_size, max_subset_size, k_hop)
+    plot_save_hypergraph(hyper_dic, k, lambda_param, min_subset_size, max_subset_size, k_hop, path)

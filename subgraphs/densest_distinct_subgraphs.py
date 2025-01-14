@@ -108,3 +108,5 @@ def parallel_densest_distinct_subgraph(args):
     backtrack_combinations(node_subset, len(node_subset), evaluate_combination)
 
     return (max_value, best_subgraph) if best_subgraph else None
+
+
