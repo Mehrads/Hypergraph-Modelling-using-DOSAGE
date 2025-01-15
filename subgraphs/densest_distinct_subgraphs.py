@@ -5,7 +5,7 @@ from utils.util import diameter_within_limit, distance
 from subgraphs.subgraph_combinations import backtrack_combinations
 from objective_function import objective_function
 
-def densest_distinct_subgraph(G, W, lambda_param, min_subset_size, max_subset_size, max_diameter):
+def densest_distinct_subgraph(G, W, lambda_param, min_subset_size, max_subset_size):
     """
     Identify the densest distinct subgraph in a graph using parallel computation.
 
@@ -38,7 +38,7 @@ def densest_distinct_subgraph(G, W, lambda_param, min_subset_size, max_subset_si
             for node_subset in node_subsets:
                 future = executor.submit(
                     parallel_densest_distinct_subgraph,
-                    (G, W, lambda_param, min_subset_size, max_subset_size, max_diameter, node_subset)
+                    (G, W, lambda_param, min_subset_size, max_subset_size, node_subset)
                 )
                 futures.append(future)
 
@@ -85,15 +85,14 @@ def parallel_densest_distinct_subgraph(args):
 
         
     """
-    G, W, lambda_param, min_subset_size, max_subset_size, max_diameter, node_subset = args
+    G, W, lambda_param, min_subset_size, max_subset_size, node_subset = args
     max_value = -float('inf')
     best_subgraph = None
 
     def evaluate_combination(combo):
         nonlocal max_value, best_subgraph
         subgraph = G.subgraph(combo).copy()  # Create a mutable copy
-        if not diameter_within_limit(subgraph, max_diameter):
-            return
+
 
         is_distinct = all(distance(subgraph, existing_subgraph) > 0 for existing_subgraph in W)
 

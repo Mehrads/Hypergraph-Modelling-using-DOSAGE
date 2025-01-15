@@ -2,7 +2,7 @@ from subgraphs.densest_subgraph import densest_subgraph
 from subgraphs.densest_distinct_subgraphs import densest_distinct_subgraph
 from utils.util import assign_remaining_vertices
 import networkx as nx
-
+import numpy as np
 
 def top_k_overlapping_densest_subgraphs(G, k, lambda_param, min_subset_size, max_subset_size, k_hop):
     """
@@ -26,20 +26,20 @@ def top_k_overlapping_densest_subgraphs(G, k, lambda_param, min_subset_size, max
 
     """
     
-    # Calculate max_diameter dynamically
-    if nx.is_connected(G):
-        avg_shortest_path_length = nx.average_shortest_path_length(G)
-        max_diameter = int(avg_shortest_path_length * 2)
-    else:
-        max_diameter = int(np.log2(len(G.nodes)))  # Fallback for disconnected graphs
+#     # Calculate max_diameter dynamically
+#     if nx.is_connected(G):
+#         avg_shortest_path_length = nx.average_shortest_path_length(G)
+#         max_diameter = int(avg_shortest_path_length * 2)
+#     else:
+#         max_diameter = int(np.log2(len(G.nodes)))  # Fallback for disconnected graphs
 
     # Step 2: Initialize with the densest subgraph
-    initial_subgraph = densest_subgraph(G, min_subset_size, max_subset_size, max_diameter)
+    initial_subgraph = densest_subgraph(G, min_subset_size, max_subset_size)
     W = [initial_subgraph] if initial_subgraph.number_of_nodes() > 0 else []
 
     while len(W) < k:
         # Step 3: Iteratively compute the next densest distinct subgraph
-        next_subgraph = densest_distinct_subgraph(G, W, lambda_param, min_subset_size, max_subset_size, max_diameter)
+        next_subgraph = densest_distinct_subgraph(G, W, lambda_param, min_subset_size, max_subset_size)
 
         if next_subgraph is None or next_subgraph.number_of_nodes() == 0:
             break
