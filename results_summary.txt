@@ -1,0 +1,5 @@
+Description | Graph Type | Noise | NMI | F1[t/d] | F1[d/t] | Omega
+No overlap, noise-free    | Erdős-Rényi     | 0     | 0.59 | 0.06 | 0.06 | 0.75
+No overlap, noisy         | Erdős-Rényi     | 1     | 0.59 | 0.06 | 0.06 | 0.75
+No overlap, noise-free    | Barabási-Albert | 0     | 0.60 | 0.53 | 0.53 | 0.75
+No overlap, noisy         | Barabási-Albert | 1     | 0.71 | 0.35 | 0.35 | 0.86

@@ -82,39 +82,45 @@ def k_hop_neighbors(G, node, k):
 
 def assign_remaining_vertices(G, subgraphs, k):
     """
-    Using k_hop_neighbors function to add the remaining vertices that doesn't belong to any subgraphs
-    to the spatially nearest subgraphs.
-    
-    It helps us to accomplish full coverage in our subgraph.
+    Assigns remaining nodes to the nearest subgraph based on k-hop distance.
     
     Args:
-        G (object): A graph represented as networkx graph object
-        subgraphs (object): A graph represented as networkx graph object
-        k: The distance of the not selected nodes to the centre node of the subgraph
+        G (nx.Graph): The original graph represented as a NetworkX graph object.
+        subgraphs (list): A list of subgraphs represented as NetworkX graph objects.
+        k (int): Maximum distance (in hops) to consider for assigning nodes.
         
     Returns:
-        An updated subgraph which added the closest not selected nodes
-    
+        list: Updated list of subgraphs with added nodes.
     """
     remaining_nodes = set(G.nodes()) - set(node for sg in subgraphs for node in sg.nodes())
     for node in remaining_nodes:
-        # Find the subgraph to which the node is closest
+        # Initialize the closest subgraph and distance
         min_distance = float('inf')
         closest_subgraph = None
+        
+        # Iterate through subgraphs to find the nearest one
         for subgraph in subgraphs:
             subgraph_nodes = subgraph.nodes()
-            for sg_node in subgraph_nodes:
-                distance = nx.shortest_path_length(G, source=node, target=sg_node)
-                if distance < min_distance:
-                    min_distance = distance
+            try:
+                # Compute distances from the current node to all subgraph nodes
+                distances = [
+                    nx.shortest_path_length(G, source=node, target=sg_node)
+                    for sg_node in subgraph_nodes
+                ]
+                # Find the minimum distance for the current subgraph
+                min_subgraph_distance = min(distances)
+                if min_subgraph_distance < min_distance:
+                    min_distance = min_subgraph_distance
                     closest_subgraph = subgraph
+            except nx.NetworkXNoPath:
+                # Ignore if no path exists to any node in this subgraph
+                continue
 
-        if min_distance <= k:
-            # Add the node to the closest subgraph
-            subgraph_nodes = list(closest_subgraph.nodes())
+        # Add the node to the closest subgraph if within k hops
+        if closest_subgraph and min_distance <= k:
             closest_subgraph.add_node(node)
             for neighbor in G.neighbors(node):
-                if neighbor in subgraph_nodes:
+                if neighbor in closest_subgraph.nodes():
                     closest_subgraph.add_edge(node, neighbor)
 
     return subgraphs
