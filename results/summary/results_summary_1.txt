@@ -1,0 +1,25 @@
+                Description       Graph_Type  Overlap_Ratio  Noise  Lambda       NMI   F1[t/d]   F1[d/t]     Omega  Avg_Overlap_Size  Detected_Overlap_Ratio
+0    No overlap, noise-free      Erdős-Rényi            0.0  False       5  0.549693  0.441176  0.441176  0.727273          9.666667                0.676471
+1    No overlap, noise-free      Erdős-Rényi            0.0  False       7  0.531561  0.470588  0.470588  0.721925          9.000000                0.676471
+2    No overlap, noise-free      Erdős-Rényi            0.0  False       9  0.523708  0.500000  0.500000  0.720143          7.666667                0.676471
+3         No overlap, noisy      Erdős-Rényi            0.0   True       5  0.549693  0.441176  0.441176  0.727273          9.666667                0.676471
+4         No overlap, noisy      Erdős-Rényi            0.0   True       7  0.523708  0.500000  0.500000  0.720143          7.666667                0.676471
+5         No overlap, noisy      Erdős-Rényi            0.0   True       9  0.523708  0.500000  0.500000  0.720143          7.666667                0.676471
+6   20% overlap, noise-free      Erdős-Rényi            0.2  False       5  0.474451  0.558824  0.558824  0.716578          8.666667                0.529412
+7   20% overlap, noise-free      Erdős-Rényi            0.2  False       7  0.474451  0.558824  0.558824  0.716578          8.666667                0.529412
+8   20% overlap, noise-free      Erdős-Rényi            0.2  False       9  0.509170  0.676471  0.676471  0.743316          4.666667                0.411765
+9        20% overlap, noisy      Erdős-Rényi            0.2   True       5  0.474451  0.558824  0.558824  0.716578          9.000000                0.558824
+10       20% overlap, noisy      Erdős-Rényi            0.2   True       7  0.474451  0.558824  0.558824  0.716578          9.000000                0.558824
+11       20% overlap, noisy      Erdős-Rényi            0.2   True       9  0.474451  0.558824  0.558824  0.716578          9.000000                0.558824
+12   No overlap, noise-free  Barabási-Albert            0.0  False       5  0.457010  0.117647  0.117647  0.720143          4.500000                0.264706
+13   No overlap, noise-free  Barabási-Albert            0.0  False       7  0.685968  0.264706  0.264706  0.848485          3.000000                0.176471
+14   No overlap, noise-free  Barabási-Albert            0.0  False       9  0.685968  0.264706  0.264706  0.848485          3.000000                0.176471
+15        No overlap, noisy  Barabási-Albert            0.0   True       5  0.712392  0.000000  0.000000  0.860963          6.000000                0.352941
+16        No overlap, noisy  Barabási-Albert            0.0   True       7  0.613634  0.117647  0.117647  0.800357          4.500000                0.264706
+17        No overlap, noisy  Barabási-Albert            0.0   True       9  0.908887  0.323529  0.323529  0.962567          3.500000                0.205882
+18  20% overlap, noise-free  Barabási-Albert            0.2  False       5  0.454256  0.470588  0.470588  0.700535          3.000000                0.176471
+19  20% overlap, noise-free  Barabási-Albert            0.2  False       7  0.454256  0.470588  0.470588  0.700535          3.000000                0.176471
+20  20% overlap, noise-free  Barabási-Albert            0.2  False       9  0.454256  0.470588  0.470588  0.700535          3.000000                0.176471
+21       20% overlap, noisy  Barabási-Albert            0.2   True       5  0.454256  0.470588  0.470588  0.700535          3.000000                0.176471
+22       20% overlap, noisy  Barabási-Albert            0.2   True       7  0.454256  0.470588  0.470588  0.700535          3.000000                0.176471
+23       20% overlap, noisy  Barabási-Albert            0.2   True       9  0.491524  0.323529  0.323529  0.736185          2.500000                0.147059

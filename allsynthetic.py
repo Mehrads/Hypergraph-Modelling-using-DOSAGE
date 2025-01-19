@@ -1,6 +1,11 @@
 import networkx as nx
 import numpy as np
 from sklearn.metrics import normalized_mutual_info_score
+from sklearn.metrics import f1_score
+from scipy.spatial.distance import jaccard
+import itertools
+import pandas as pd
+from tqdm import tqdm
 from utils.edge_reader import read_edges_from_file
 from utils.outputdir import outputdir
 from utils.savesubgraphs import savesubgraphs, readsubgraphs
@@ -8,76 +13,11 @@ from subgraphs.top_k import top_k_overlapping_densest_subgraphs
 from utils.plot.plot import plot_save_graph, plot_save_subgraphs
 from utils.plot.hypergraph_plot import plot_save_hypergraph
 from hypergraph.hypergraph import graph_to_hypergraph
+import os
 
-def compute_f1(subgraphs_a, subgraphs_b, num_nodes):
+def generate_synthetic_graph(graph_type, n=54, p=0.7, m=2, overlap_ratio=0.0, noise=False, seed=42):
     """
-    Compute F1 score for comparing two sets of subgraphs.
-    
-    Args:
-        subgraphs_a (list of sets): First set of subgraphs.
-        subgraphs_b (list of sets): Second set of subgraphs.
-        num_nodes (int): Total number of nodes.
-        
-    Returns:
-        float: F1 score.
-    """
-    labels_a = [-1] * num_nodes
-    for label, subgraph in enumerate(subgraphs_a):
-        for node in subgraph:
-            labels_a[node] = label
-
-    labels_b = [-1] * num_nodes
-    for label, subgraph in enumerate(subgraphs_b):
-        for node in subgraph:
-            labels_b[node] = label
-
-    tp = sum(1 for a, b in zip(labels_a, labels_b) if a == b and a != -1)
-    fp = sum(1 for a, b in zip(labels_a, labels_b) if a != b and b != -1)
-    fn = sum(1 for a, b in zip(labels_a, labels_b) if a != b and a != -1)
-
-    precision = tp / (tp + fp) if (tp + fp) > 0 else 0.0
-    recall = tp / (tp + fn) if (tp + fn) > 0 else 0.0
-    f1 = 2 * (precision * recall) / (precision + recall) if (precision + recall) > 0 else 0.0
-    return f1
-
-def compute_omega_index(labels_a, labels_b):
-    """
-    Compute the Omega Index, which measures the agreement between two clusterings.
-    
-    Args:
-        labels_a (list): Labels from the first clustering.
-        labels_b (list): Labels from the second clustering.
-        
-    Returns:
-        float: Omega Index.
-    """
-    total_pairs = 0
-    agree_pairs = 0
-
-    for i in range(len(labels_a)):
-        for j in range(i + 1, len(labels_a)):
-            same_cluster_a = labels_a[i] == labels_a[j]
-            same_cluster_b = labels_b[i] == labels_b[j]
-            if same_cluster_a == same_cluster_b:
-                agree_pairs += 1
-            total_pairs += 1
-
-    return agree_pairs / total_pairs if total_pairs > 0 else 0.0
-
-def generate_synthetic_graph(graph_type, n=34, p=0.7, m=2, noise=False, seed=42):
-    """
-    Generate a synthetic graph based on the specified type.
-    
-    Args:
-        graph_type (str): Type of graph ("Erdős-Rényi" or "Barabási-Albert").
-        n (int): Number of nodes.
-        p (float): Probability for Erdős-Rényi graph.
-        m (int): Number of edges to attach for Barabási-Albert graph.
-        noise (bool): Whether to add noise to the graph.
-        seed (int): Random seed for reproducibility.
-        
-    Returns:
-        nx.Graph: Generated graph.
+    Generate a synthetic graph with optional overlapping communities.
     """
     np.random.seed(seed)
     if graph_type == "Erdős-Rényi":
@@ -87,6 +27,32 @@ def generate_synthetic_graph(graph_type, n=34, p=0.7, m=2, noise=False, seed=42)
     else:
         raise ValueError("Invalid graph type. Choose 'Erdős-Rényi' or 'Barabási-Albert'.")
 
+    # Create ground truth communities with overlap
+    base_communities = [
+        set(range(0, 11)),
+        set(range(11, 22)),
+        set(range(22, 34))
+    ]
+
+    if overlap_ratio > 0:
+        overlap_size = int(n * overlap_ratio / 3)
+        overlapping_nodes = []
+
+        for i in range(len(base_communities) - 1):
+            nodes_from_first = np.random.choice(list(base_communities[i]), overlap_size, replace=False)
+            nodes_from_second = np.random.choice(list(base_communities[i + 1]), overlap_size, replace=False)
+
+            base_communities[i + 1].update(nodes_from_first)
+            base_communities[i].update(nodes_from_second)
+
+            overlapping_nodes.extend(nodes_from_first)
+            overlapping_nodes.extend(nodes_from_second)
+
+        for node1 in overlapping_nodes:
+            for node2 in overlapping_nodes:
+                if node1 != node2 and np.random.random() < 0.7:
+                    G.add_edge(node1, node2)
+
     if noise:
         for _ in range(int(0.05 * n)):
             u, v = np.random.choice(n, 2, replace=False)
@@ -94,92 +60,167 @@ def generate_synthetic_graph(graph_type, n=34, p=0.7, m=2, noise=False, seed=42)
                 G.remove_edge(u, v)
             else:
                 G.add_edge(u, v)
-    return G
+
+    return G, base_communities
 
 def compute_metrics(ground_truth, detected, num_nodes):
     """
-    Compute NMI, F1[t/d], F1[d/t], and Ω.
-    
-    Args:
-        ground_truth (list of sets): Ground truth subgraphs.
-        detected (list of sets): Detected subgraphs.
-        num_nodes (int): Total number of nodes.
-        
-    Returns:
-        tuple: NMI, F1[t/d], F1[d/t], and Ω.
+    Compute all metrics: NMI, F1, Omega, and overlap metrics.
     """
     ground_truth_labels = [-1] * num_nodes
     detected_labels = [-1] * num_nodes
 
+    # Assign labels for ground truth
     for label, subgraph in enumerate(ground_truth):
         for node in subgraph:
             ground_truth_labels[node] = label
 
+    # Assign labels for detected communities
     for label, subgraph in enumerate(detected):
         for node in subgraph:
             detected_labels[node] = label
 
+    # Normalized Mutual Information (NMI)
     nmi = normalized_mutual_info_score(ground_truth_labels, detected_labels)
-    f1_td = compute_f1(ground_truth, detected, num_nodes)
-    f1_dt = compute_f1(detected, ground_truth, num_nodes)
-    omega = compute_omega_index(ground_truth_labels, detected_labels)
 
-    return nmi, f1_td, f1_dt, omega
+    # Precision, Recall, and F1-Score for overlapping communities
+    precision_list = []
+    recall_list = []
+    f1_list = []
+    for gt_comm in ground_truth:
+        for det_comm in detected:
+            intersection = len(gt_comm & det_comm)
+            precision = intersection / len(det_comm) if len(det_comm) > 0 else 0
+            recall = intersection / len(gt_comm) if len(gt_comm) > 0 else 0
+            f1 = 2 * precision * recall / (precision + recall) if (precision + recall) > 0 else 0
 
-if __name__ == "__main__":
-    configurations = [
-        ("Erdős-Rényi", False, "No overlap, noise-free"),
-        ("Erdős-Rényi", True, "No overlap, noisy"),
-        ("Barabási-Albert", False, "No overlap, noise-free"),
-        ("Barabási-Albert", True, "No overlap, noisy"),
-    ]
+            precision_list.append(precision)
+            recall_list.append(recall)
+            f1_list.append(f1)
+
+    avg_precision = np.mean(precision_list)
+    avg_recall = np.mean(recall_list)
+    avg_f1 = np.mean(f1_list)
+
+    # Omega Index
+    def omega_index(gt, det):
+        overlap_matrix = np.zeros((len(gt), len(det)))
+        for i, gt_comm in enumerate(gt):
+            for j, det_comm in enumerate(det):
+                overlap_matrix[i, j] = len(gt_comm & det_comm) / len(gt_comm | det_comm)
+        return np.mean(overlap_matrix)
+
+    omega = omega_index(ground_truth, detected)
+
+    # Jaccard Similarity
+    jaccard_similarities = []
+    for gt_comm in ground_truth:
+        for det_comm in detected:
+            jaccard_similarities.append(1 - jaccard(list(gt_comm), list(det_comm)))
+
+    avg_jaccard_similarity = np.mean(jaccard_similarities)
+
+    # Overlap metrics
+    overlap_count = sum(len(node) > 1 for node in ground_truth)
+    avg_overlap_size = np.mean([len(set(node)) for node in ground_truth])
+
+    return {
+        'NMI': nmi,
+        'Precision': avg_precision,
+        'Recall': avg_recall,
+        'F1': avg_f1,
+        'Omega': omega,
+        'Jaccard': avg_jaccard_similarity,
+        'Overlap Count': overlap_count,
+        'Average Overlap Size': avg_overlap_size
+    }
+
+def hyperparameter_grid_search(graph_type="Barabási-Albert", overlap_ratio=0.0, noise=False):
+    """
+    Perform grid search over hyperparameters to find optimal values.
+    """
+    if overlap_ratio > 0:
+        lambda_values = [1, 3]  # Test lambda less than 5
+    else:
+        lambda_values = [5, 7, 9]  # Test lambda greater than 5
+
+    param_grid = {
+        'k': [2, 3, 4, 5],
+        'lambda_param': lambda_values,
+        'min_subset_size': [6, 8, 10, 12],
+        'max_subset_size': [16, 18, 20, 22],
+        'k_hop': [1, 2]
+    }
 
     results = []
-    for graph_type, noise, description in configurations:
-        G = generate_synthetic_graph(graph_type, n=34, p=0.7, m=2, noise=noise, seed=42)
+    param_combinations = list(itertools.product(
+        param_grid['k'],
+        param_grid['lambda_param'],
+        param_grid['min_subset_size'],
+        param_grid['max_subset_size'],
+        param_grid['k_hop']
+    ))
 
-        np.random.seed(42)
-        for node in G.nodes():
-            degree = G.degree(node)
-            clustering_coeff = nx.clustering(G, node)
-            random_feature = np.random.random()
-            G.nodes[node]['features'] = np.array([degree, clustering_coeff, random_feature])
+    for k, lambda_param, min_size, max_size, k_hop in tqdm(param_combinations):
+        if min_size >= max_size:
+            continue
 
-        k = 3
-        lambda_param = 7
-        min_subset_size = 10
-        max_subset_size = 20
-        k_hop = 1
+        G, ground_truth = generate_synthetic_graph(graph_type=graph_type, overlap_ratio=overlap_ratio, noise=noise)
 
-        subgraphs = top_k_overlapping_densest_subgraphs(G, k, lambda_param, min_subset_size, max_subset_size, k_hop)
+        try:
+            subgraphs = top_k_overlapping_densest_subgraphs(
+                G, k=k,
+                lambda_param=lambda_param,
+                min_subset_size=min_size,
+                max_subset_size=max_size,
+                k_hop=k_hop
+            )
 
-        hyper_dic = {}
-        for i, sg in enumerate(subgraphs, 1):
-            hyper_dic[f"Subgraph {i}"] = set(sg.nodes())
-        hypergraph = graph_to_hypergraph(hyper_dic)
+            detected = [set(sg.nodes()) for sg in subgraphs]
+            metrics = compute_metrics(ground_truth, detected, G.number_of_nodes())
 
-        path = outputdir(f"{graph_type}_Graph_Noise={noise}_K={k}_Lambda={lambda_param}")
-        savesubgraphs(hyper_dic, path)
-        plot_save_graph(G, k, lambda_param, min_subset_size, max_subset_size, k_hop, path, title=f"{graph_type} Graph")
-        plot_save_subgraphs(G, subgraphs, k, lambda_param, min_subset_size, max_subset_size, k_hop, path)
-        plot_save_hypergraph(hyper_dic, k, lambda_param, min_subset_size, max_subset_size, k_hop, path)
+            results.append({
+                'k': k,
+                'lambda': lambda_param,
+                'min_size': min_size,
+                'max_size': max_size,
+                'k_hop': k_hop,
+                **metrics
+            })
 
-        ground_truth = [
-            set(range(0, 11)),
-            set(range(11, 22)),
-            set(range(22, 34)),
-        ]
+        except Exception as e:
+            continue
 
-        detected = [set(sg.nodes()) for sg in subgraphs]
-        num_nodes = G.number_of_nodes()
+    results_df = pd.DataFrame(results)
+    results_df = results_df.sort_values('NMI', ascending=False)
 
-        nmi, f1_td, f1_dt, omega = compute_metrics(ground_truth, detected, num_nodes)
-        results.append((description, graph_type, noise, nmi, f1_td, f1_dt, omega))
+    return results_df
 
-    output_file = f"results/{graph_type}_Graph_Noise={noise}_K={k}_Lambda={lambda_param}/results_summary.txt"
-    with open(output_file, "w") as f:
-        f.write("Description | Graph Type | Noise | NMI | F1[t/d] | F1[d/t] | Omega\n")
-        for result in results:
-            f.write(f"{result[0]:<25} | {result[1]:<15} | {result[2]:<5} | {result[3]:.2f} | {result[4]:.2f} | {result[5]:.2f} | {result[6]:.2f}\n")
+def run_analysis(output_base_dir="results"):
+    """
+    Run the complete analysis for all configurations.
+    """
+    configurations = [
+        ("Erdős-Rényi", 0.0, False, "No overlap, noise-free"),
+        ("Erdős-Rényi", 0.0, True, "No overlap, noisy"),
+        ("Erdős-Rényi", 0.2, False, "20% overlap, noise-free"),
+        ("Erdős-Rényi", 0.2, True, "20% overlap, noisy"),
+        ("Barabási-Albert", 0.0, False, "No overlap, noise-free"),
+        ("Barabási-Albert", 0.0, True, "No overlap, noisy"),
+        ("Barabási-Albert", 0.2, False, "20% overlap, noise-free"),
+        ("Barabási-Albert", 0.2, True, "20% overlap, noisy")
+    ]
 
-    print(f"Results saved to {output_file}")
+    all_results = []
+
+    for graph_type, overlap_ratio, noise, description in configurations:
+        print(f"\nRunning analysis for {description}")
+        results = hyperparameter_grid_search(graph_type=graph_type, overlap_ratio=overlap_ratio, noise=noise)
+
+        results.to_csv(os.path.join(output_base_dir, f"results_{graph_type}_overlap_{overlap_ratio}_noise_{noise}.csv"))
+        all_results.append(results)
+
+    return all_results
+
+if __name__ == "__main__":
+    run_analysis()
